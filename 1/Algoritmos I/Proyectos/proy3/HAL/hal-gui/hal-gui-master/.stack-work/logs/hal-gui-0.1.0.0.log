@@ -1,0 +1,103 @@
+Configuring hal-gui-0.1.0.0...
+Preprocessing executable 'hal-gui' for hal-gui-0.1.0.0...
+[ 1 of 17] Compiling Language.Syntax  ( Language/Syntax.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/hal-gui/hal-gui-tmp/Language/Syntax.o )
+[ 2 of 17] Compiling Language.ListAssoc ( Language/ListAssoc.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/hal-gui/hal-gui-tmp/Language/ListAssoc.o )
+
+Language/ListAssoc.hs:35:19: warning: [-Wunused-matches]
+    Defined but not used: ‘b’
+[ 3 of 17] Compiling Language.Semantics ( Language/Semantics.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/hal-gui/hal-gui-tmp/Language/Semantics.o )
+
+Language/Semantics.hs:30:26: error:
+    • Couldn't match expected type ‘Int’ with actual type ‘Maybe Int’
+    • In the expression: la_busca state x
+      In an equation for ‘evalIExpr’:
+          evalIExpr (VI x) state = la_busca state x
+
+Language/Semantics.hs:36:29: error:
+    • Couldn't match expected type ‘(Integer -> Integer -> Integer)
+                                    -> Int -> Int’
+                  with actual type ‘Int’
+    • The function ‘evalIExpr’ is applied to four arguments,
+      but its type ‘IntExpr -> StateI -> Int’ has only two
+      In the expression: (evalIExpr x state) mod (evalIExpr y state)
+      In an equation for ‘evalIExpr’:
+          evalIExpr (Mod x y) state
+            = (evalIExpr x state) mod (evalIExpr y state)
+
+Language/Semantics.hs:42:26: error:
+    • Couldn't match expected type ‘Bool’ with actual type ‘Maybe Bool’
+    • In the expression: la_busca (snd state) x
+      In an equation for ‘evalBExpr’:
+          evalBExpr (VB x) state = la_busca (snd state) x
+
+Language/Semantics.hs:46:32: error:
+    • Couldn't match expected type ‘State -> a2’ with actual type ‘Int’
+    • The function ‘evalIExpr’ is applied to three arguments,
+      but its type ‘IntExpr -> StateI -> Int’ has only two
+      In the first argument of ‘(==)’, namely ‘(evalIExpr x fst state)’
+      In the expression:
+        (evalIExpr x fst state) == (evalIExpr y fst state)
+
+Language/Semantics.hs:46:44: error:
+    • Couldn't match type ‘(a0, b0) -> a0’ with ‘ListAssoc VarName Int’
+      Expected type: StateI
+        Actual type: (a0, b0) -> a0
+    • Probable cause: ‘fst’ is applied to too few arguments
+      In the second argument of ‘evalIExpr’, namely ‘fst’
+      In the first argument of ‘(==)’, namely ‘(evalIExpr x fst state)’
+      In the expression:
+        (evalIExpr x fst state) == (evalIExpr y fst state)
+
+Language/Semantics.hs:46:59: error:
+    • Couldn't match expected type ‘State -> a2’ with actual type ‘Int’
+    • The function ‘evalIExpr’ is applied to three arguments,
+      but its type ‘IntExpr -> StateI -> Int’ has only two
+      In the second argument of ‘(==)’, namely ‘(evalIExpr y fst state)’
+      In the expression:
+        (evalIExpr x fst state) == (evalIExpr y fst state)
+
+Language/Semantics.hs:46:71: error:
+    • Couldn't match type ‘(a1, b1) -> a1’ with ‘ListAssoc VarName Int’
+      Expected type: StateI
+        Actual type: (a1, b1) -> a1
+    • Probable cause: ‘fst’ is applied to too few arguments
+      In the second argument of ‘evalIExpr’, namely ‘fst’
+      In the second argument of ‘(==)’, namely ‘(evalIExpr y fst state)’
+      In the expression:
+        (evalIExpr x fst state) == (evalIExpr y fst state)
+
+Language/Semantics.hs:47:31: error:
+    • Couldn't match expected type ‘State -> a5’ with actual type ‘Int’
+    • The function ‘evalIExpr’ is applied to three arguments,
+      but its type ‘IntExpr -> StateI -> Int’ has only two
+      In the first argument of ‘(<)’, namely ‘(evalIExpr x fst state)’
+      In the expression:
+        (evalIExpr x fst state) < (evalIExpr y fst state)
+
+Language/Semantics.hs:47:43: error:
+    • Couldn't match type ‘(a3, b2) -> a3’ with ‘ListAssoc VarName Int’
+      Expected type: StateI
+        Actual type: (a3, b2) -> a3
+    • Probable cause: ‘fst’ is applied to too few arguments
+      In the second argument of ‘evalIExpr’, namely ‘fst’
+      In the first argument of ‘(<)’, namely ‘(evalIExpr x fst state)’
+      In the expression:
+        (evalIExpr x fst state) < (evalIExpr y fst state)
+
+Language/Semantics.hs:47:57: error:
+    • Couldn't match expected type ‘State -> a5’ with actual type ‘Int’
+    • The function ‘evalIExpr’ is applied to three arguments,
+      but its type ‘IntExpr -> StateI -> Int’ has only two
+      In the second argument of ‘(<)’, namely ‘(evalIExpr y fst state)’
+      In the expression:
+        (evalIExpr x fst state) < (evalIExpr y fst state)
+
+Language/Semantics.hs:47:69: error:
+    • Couldn't match type ‘(a4, b3) -> a4’ with ‘ListAssoc VarName Int’
+      Expected type: StateI
+        Actual type: (a4, b3) -> a4
+    • Probable cause: ‘fst’ is applied to too few arguments
+      In the second argument of ‘evalIExpr’, namely ‘fst’
+      In the second argument of ‘(<)’, namely ‘(evalIExpr y fst state)’
+      In the expression:
+        (evalIExpr x fst state) < (evalIExpr y fst state)

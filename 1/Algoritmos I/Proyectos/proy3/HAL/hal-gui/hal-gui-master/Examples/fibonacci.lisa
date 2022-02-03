@@ -1,0 +1,18 @@
+varinput n : Int;
+
+vardef  fibn0 : Int;
+vardef fibn1 : Int;
+vardef i : Int;
+vardef aux : Int;
+
+fibn0 := 1;
+fibn1 := 1;
+aux := 0;
+i := 2;
+
+do ( i < n || i = n) ->
+    aux := fibn1;
+    fibn1 := fibn1 + fibn0;
+    fibn0 := aux;
+    i := i + 1;
+od

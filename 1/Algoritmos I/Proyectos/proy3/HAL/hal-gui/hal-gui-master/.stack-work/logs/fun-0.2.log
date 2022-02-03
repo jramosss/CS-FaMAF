@@ -1,0 +1,46 @@
+Configuring fun-0.2...
+Preprocessing library fun-0.2...
+[ 1 of 25] Compiling Fun.Verification.Error ( Fun/Verification/Error.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Verification/Error.o )
+[ 2 of 25] Compiling Fun.Eval.Rules   ( Fun/Eval/Rules.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Eval/Rules.o )
+[ 3 of 25] Compiling Fun.Derivation.Error ( Fun/Derivation/Error.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Derivation/Error.o )
+[ 4 of 25] Compiling Fun.Decl.Error   ( Fun/Decl/Error.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Decl/Error.o )
+[ 5 of 25] Compiling Fun.Decl         ( Fun/Decl.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Decl.o )
+[ 6 of 25] Compiling Fun.Derivation.Derivation ( Fun/Derivation/Derivation.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Derivation/Derivation.o )
+
+Fun/Derivation/Derivation.hs:23:1: warning: [-Wunused-imports]
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+Fun/Derivation/Derivation.hs:56:1: warning: [-Worphans]
+    Orphan instance: instance Monoid m => Monoid (Either a m)
+    To avoid this
+        move the instance declaration to the module of the class or of the type, or
+        wrap the type with a newtype and declare the instance on the new type.
+[ 7 of 25] Compiling Fun.Theory       ( Fun/Theory.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Theory.o )
+[ 8 of 25] Compiling Fun.FunTheories.Arith ( Fun/FunTheories/Arith.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/FunTheories/Arith.o )
+[ 9 of 25] Compiling Fun.FunTheories.FOL ( Fun/FunTheories/FOL.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/FunTheories/FOL.o )
+[10 of 25] Compiling Fun.FunTheories.List ( Fun/FunTheories/List.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/FunTheories/List.o )
+[11 of 25] Compiling Fun.Theories     ( Fun/Theories.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Theories.o )
+[12 of 25] Compiling Fun.Declarations ( Fun/Declarations.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Declarations.o )
+[13 of 25] Compiling Fun.Derivation   ( Fun/Derivation.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Derivation.o )
+
+Fun/Derivation.hs:45:1: warning: [-Wunused-imports]
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+[14 of 25] Compiling Fun.Verification.Verification ( Fun/Verification/Verification.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Verification/Verification.o )
+[15 of 25] Compiling Fun.Verification ( Fun/Verification.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Verification.o )
+[16 of 25] Compiling Fun.Module       ( Fun/Module.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Module.o )
+[17 of 25] Compiling Fun.Module.Graph ( Fun/Module/Graph.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Module/Graph.o )
+[18 of 25] Compiling Fun.Parser.Internal ( Fun/Parser/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Parser/Internal.o )
+[19 of 25] Compiling Fun.Parser.Decl  ( Fun/Parser/Decl.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Parser/Decl.o )
+[20 of 25] Compiling Fun.Parser.Module ( Fun/Parser/Module.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Parser/Module.o )
+[21 of 25] Compiling Fun.Parser       ( Fun/Parser.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Parser.o )
+[22 of 25] Compiling Fun.TypeChecker  ( Fun/TypeChecker.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/TypeChecker.o )
+[23 of 25] Compiling Fun.Eval.Eval    ( Fun/Eval/Eval.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Eval/Eval.o )
+[24 of 25] Compiling Fun.Module.Error ( Fun/Module/Error.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Module/Error.o )
+[25 of 25] Compiling Fun.Environment  ( Fun/Environment.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Fun/Environment.o )
+Installing library in
+/home/shuls/Desktop/Shuls/algo1/HAL/hal-gui/hal-gui-master/.stack-work/install/x86_64-linux/lts-9.6/8.0.2/lib/x86_64-linux-ghc-8.0.2/fun-0.2-LQ7ADCNCDalBrxECoXDVDG
+Registering fun-0.2...

@@ -1,0 +1,143 @@
+Punto 6----------------------------------------------------------------------------
+
+Estado Inicial
+x = 4
+z = 5
+w = True
+
+2do Estado x := 9
+x = 9 
+z = 5
+w = True
+
+3er Estado w := False
+x = 9
+z = 5
+w = False
+
+4to Estado x := x+1
+x = 10
+z = 5
+w = False
+
+5to Estado w := not w;
+x = 10
+z = 5 
+w = True
+
+6to Estado z:= 10
+x = 10
+z = 10
+w = True
+
+7mo Estado w := z<x;
+x = 10
+z = 10
+w = False
+
+8vo Estado x := x+z;
+x = 20
+z = 10
+w = False
+
+9no Estado w := z<x;
+x = 20
+z = 10
+w = True
+
+Estado Final 
+x = 20
+z = 10
+w = True
+
+Punto 7-----------------------------------------------------------------------------
+Estado Inicial 
+x = 5
+y = 4
+z = 8
+m = 0
+
+2do Estado 
+x = 5
+y = 4
+z = 8
+m = 4
+
+3er Estado
+x = 5
+y = 4
+z = 8
+m = 4
+
+Estado Final
+x = 5
+y = 4
+z = 8
+m = 4
+
+Lo que hace este programa es fijarse cual es el menor valor
+si x es menor que y, m := x
+si x es mayor que y. m := y
+si m es menor que z, skip
+si m es mayor que z, m := z
+
+Punto 8-----------------------------------------------------------------------------
+i := 0;
+do not (x < y) ->
+x := x - y;
+i := i + 1;
+od
+Estado Inicial
+x = 13
+y=3
+i=0
+1era Interaccion
+x=10
+y=3
+i=1
+2da Interaccion
+x=7
+y=3
+i=2
+3era Interaccion
+x=4
+y=3
+i=3
+4ta Interaccion
+x=1
+y=3
+i=4
+ahora x<y asi que no entra mas en el do.
+Estado Final
+x=1
+y=3
+i=4
+
+8b)---------------------------------------------------------------------------------
+i := 2;
+res := True;
+do (i < x && res) ->
+res := res && not (x % i = 0);
+i := i + 1;
+od
+Estado Inicial
+x = 5
+i = 0
+res = True
+1era Interaccion
+x = 5
+i = 3
+res = True
+2da Interaccion
+x = 5
+i= 4
+res = True
+3era Interaccion
+x = 5
+i=5
+res= False
+Estado Final
+x = 5
+i = 5
+res = False
+Calcula los restos de la division de 5 desde 2 hasta 5

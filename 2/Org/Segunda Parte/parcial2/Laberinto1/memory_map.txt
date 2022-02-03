@@ -1,0 +1,50 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000040080000 0x0000000000400000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD main.o
+
+.text           0x0000000040080000      0x180
+ *(.text*)
+ .text          0x0000000040080000      0x180 main.o
+
+.iplt           0x0000000040080180        0x0
+ .iplt          0x0000000040080180        0x0 main.o
+
+.rela.dyn       0x0000000040080180        0x0
+ .rela.iplt     0x0000000040080180        0x0 main.o
+ .rela.data     0x0000000040080180        0x0 main.o
+
+.data           0x0000000040080180       0x88
+ .data          0x0000000040080180       0x88 main.o
+
+.igot.plt       0x0000000040080208        0x0
+ .igot.plt      0x0000000040080208        0x0 main.o
+
+.bss            0x0000000040080208        0x0
+ *(.bss*)
+ .bss           0x0000000040080208        0x0 main.o
+                0x0000000000400000                _stack_end = 0x400000
+OUTPUT(main.elf elf64-littleaarch64)
+LOAD linker stubs
+
+.debug_line     0x0000000000000000       0x95
+ .debug_line    0x0000000000000000       0x95 main.o
+
+.debug_info     0x0000000000000000       0x2e
+ .debug_info    0x0000000000000000       0x2e main.o
+
+.debug_abbrev   0x0000000000000000       0x14
+ .debug_abbrev  0x0000000000000000       0x14 main.o
+
+.debug_aranges  0x0000000000000000       0x30
+ .debug_aranges
+                0x0000000000000000       0x30 main.o
+
+.debug_str      0x0000000000000000       0x41
+ .debug_str     0x0000000000000000       0x41 main.o

@@ -1,0 +1,65 @@
+.alert-modal-content {
+    margin: auto;
+    background: rgb(255, 255, 255);
+    background-image: url('./images/voldemort_laugh.jpg');
+    background-size: cover;
+    opacity: 1;
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    padding: 5%;
+    padding-top: 10%;
+    color: #b88d0a;
+  }
+
+
+.divination-modal {
+    cursor: pointer;
+    background-color: #b88d0a;
+    text-align: center;
+    padding: 1%;
+    display: inline-block;
+  }
+
+.director-modal {
+  background-color: #e0c580;
+  padding: 1%;
+  height: auto;
+  width: auto;
+}
+
+.director-modal-content {
+  background-color: #e0c580;
+  width: 30%;
+  text-align: center;
+}
+
+.divination-modal-content {
+  background-color: #e0c580;
+  text-align: center;
+}
+
+.figure-divination {
+  border: 1px solid black;
+  margin: 1%;
+  display: inline-block !important;
+  overflow: hidden;
+}
+
+.img-divination {
+  height:128px !important;
+  width: 128px !important;
+}
+
+.spell-modal {
+  cursor: pointer;
+  background-color: #b88d0a;
+  text-align: center;
+  padding: 1%;
+  display: inline-block;
+}
+
+.spell-modal-content {
+  background-color: #e0c580;
+  text-align: center;
+}

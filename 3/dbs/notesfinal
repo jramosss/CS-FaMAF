@@ -1,0 +1,21 @@
+- Aprendan a encontrar testigos de 3FN y a probar que un esquema esta en 3FN - ver ejercicios de clase y de la práctica sobre esto.
+- Practiquen algoritmos de encausamiento - ejercicios dados en clase y de la práctica.
+hagan ejercicios donde buscan dependencias funcionales para un enunciado concreto - hay en la práctica e hicimos uno en clase.
+
+Otros consejos:
+
+- Hagan consultas sofisticadas de la práctica de algebra de tablas
+
+- Expresen como foldr varias funciones sobre listas (p.ej. borrar un elemento de todos lados, contar los elementos diferentes, hacer predicado de inclusión de listas, invertir una lista, etc.)
+prueben varias propiedades de álgebra de tablas (ya sea de la práctica, hechas en clase, o mencionadas en el capítulo de optimización de consultas)
+
+En los finales los ejercicios van a ser mas cortos y espero que sepan ciertas cosas importantes que indico abajo para las que no va a haber machete.
+Entonces deben saber:
+
+- Calcular factor de selectividad para selección y reunión natural.
+- Calcular tamaño de selección, tamaño de reunión natural.
+- Algoritmos de programación dinámica para tratar expresión con varios natural join.
+- árbol B+: estructura, búsqueda en el mismo, calculo de altura.
+
+Considero que ya han tenido exposición suficiente a estas cosas a través de las clases, parcial modelo, parcial, clase de aclaraciones y explicaciones sobre el parcial - y algunos además tuvieron acceso al recuperatorio.
+(para aquellos que lo necesiten este material está subido en el aula virtual)

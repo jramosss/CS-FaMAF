@@ -1,0 +1,33 @@
+add XZR,XZR,XZR R
+add x9,x0,17 I
+ldrb w10,[x9],#0 D
+b.eq jump CB
+b derechaP B
+movz x13,0x4550,lsl 0 IM
+
+En ese orden:
+
+opcode     | Rm   | shamt  | Rn   | Rd
+
+10001011000  00000 000000  00000 00000
+
+opcode    |ALU_immediate|Rn   |Rd
+
+1001000100 000000010001 00000 01001
+
+opcode    | Dt_adress | op | Rn | Rt
+
+00111000010 000000000   00  01001 01010
+
+opcode  | COND_BR_adress      | Rt
+          3 instrucciones
+01010100  0000000000000000011   00000
+
+opcode | COND_BR_adress
+
+000101  00000000000000000000101010
+
+opcode   |op| MOV_immediate | Rd
+    
+110100101 00 001000111000110  01101
+

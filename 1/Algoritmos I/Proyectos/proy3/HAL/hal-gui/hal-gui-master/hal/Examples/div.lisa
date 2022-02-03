@@ -1,0 +1,21 @@
+
+varinput x: Int;
+varinput z: Int;
+varinput y: Int;
+
+vardef q: Int;
+vardef r: Int;
+
+{ Pre: x = X ∧ y = Y ∧ ¬ (Y = 0) ∧ ¬ (Y < 0) ∧ ¬ (X < 0)}
+
+r:=x;
+q := 0;
+
+while (y < r || y = r) { x = y * q + r ∧ ¬ (r < 0)}
+    do
+        r := r - y;
+        q := q + 1
+    od;
+x:=0;
+
+{ Post: X = Y * q + r ∧ ¬ (r <= 0) ∧ r < Y }

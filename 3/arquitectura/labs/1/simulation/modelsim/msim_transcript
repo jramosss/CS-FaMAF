@@ -1,0 +1,277 @@
+# ERROR: No extended dataflow license exists
+# do Processor-pipeline_run_msim_rtl_systemverilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/usuario/intelFPGA_lite/18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/writeback.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/writeback.sv 
+# -- Compiling module writeback
+# 
+# Top level modules:
+# 	writeback
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/sl2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/sl2.sv 
+# -- Compiling module sl2
+# 
+# Top level modules:
+# 	sl2
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/fetch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/fetch.sv 
+# -- Compiling module fetch
+# 
+# Top level modules:
+# 	fetch
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/execute.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/execute.sv 
+# -- Compiling module execute
+# 
+# Top level modules:
+# 	execute
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/signext.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/signext.sv 
+# -- Compiling module signext
+# 
+# Top level modules:
+# 	signext
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/decode.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/decode.sv 
+# -- Compiling module decode
+# 
+# Top level modules:
+# 	decode
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/processor_arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/processor_arm.sv 
+# -- Compiling module processor_arm
+# 
+# Top level modules:
+# 	processor_arm
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/aludec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/aludec.sv 
+# -- Compiling module aludec
+# 
+# Top level modules:
+# 	aludec
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/maindec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/maindec.sv 
+# -- Compiling module maindec
+# 
+# Top level modules:
+# 	maindec
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/imem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/imem.sv 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/bcondcheck.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/bcondcheck.sv 
+# -- Compiling module bcondcheck
+# 
+# Top level modules:
+# 	bcondcheck
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/usuario/Escritorio/Laboratorio1-Arq/dmem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vcom -reportprogress 300 -93 -work work /home/usuario/Escritorio/Laboratorio1-Arq/dmem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dmem
+# -- Compiling architecture behave of dmem
+# ** Warning: /home/usuario/Escritorio/Laboratorio1-Arq/dmem.vhd(30): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vlog -sv -work work +incdir+/home/usuario/Escritorio/Laboratorio1-Arq {/home/usuario/Escritorio/Laboratorio1-Arq/processor_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:29 on Nov 03,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/usuario/Escritorio/Laboratorio1-Arq" /home/usuario/Escritorio/Laboratorio1-Arq/processor_tb.sv 
+# -- Compiling module processor_tb
+# 
+# Top level modules:
+# 	processor_tb
+# End time: 17:48:29 on Nov 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  processor_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" processor_tb 
+# Start time: 17:48:29 on Nov 03,2021
+# Loading sv_std.std
+# Loading work.processor_tb
+# Loading work.processor_arm
+# Loading work.controller
+# Loading work.maindec
+# Loading work.aludec
+# Loading work.datapath
+# Loading work.fetch
+# Loading work.mux2
+# Loading work.flopr
+# Loading work.adder
+# Loading work.decode
+# Loading work.regfile
+# Loading work.signext
+# Loading work.execute
+# Loading work.alu
+# Loading work.sl2
+# Loading work.memory
+# Loading work.bcondcheck
+# Loading work.writeback
+# Loading work.imem
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.numeric_std(body)
+# Loading work.dmem(behave)
+# ** Warning: (vsim-3015) /home/usuario/Escritorio/Laboratorio1-Arq/datapath.sv(80): [PCDPC] - Port size (4) does not match connection size (5) for port 'CPSR_flags'. The port definition is at: /home/usuario/Escritorio/Laboratorio1-Arq/memory.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/MEMORY File: /home/usuario/Escritorio/Laboratorio1-Arq/memory.sv
+# ** Warning: (vsim-3015) /home/usuario/Escritorio/Laboratorio1-Arq/datapath.sv(88): [PCDPC] - Port size (5) does not match connection size (10) for port 'q'. The port definition is at: /home/usuario/Escritorio/Laboratorio1-Arq/flopr.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/COND_B File: /home/usuario/Escritorio/Laboratorio1-Arq/flopr.sv
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Note: fin del testdump
+#    Time: 1620 ps  Iteration: 1  Instance: /processor_tb/dut/dataMem
+# ** Note: $stop    : /home/usuario/Escritorio/Laboratorio1-Arq/processor_tb.sv(26)
+#    Time: 1640 ps  Iteration: 0  Instance: /processor_tb
+# Break in Module processor_tb at /home/usuario/Escritorio/Laboratorio1-Arq/processor_tb.sv line 26

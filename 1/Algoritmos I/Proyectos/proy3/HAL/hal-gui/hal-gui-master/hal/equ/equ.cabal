@@ -1,0 +1,81 @@
+Name:                equ
+Category:            Proof Checker
+Version:             0.2.1
+Synopsis:            A proof checker for propositional calculus.
+Description:         equ is a program for checking derivations of propositional
+                     calculus.
+License:             GPL
+License-file:        LICENSE
+Author:              Renato Cherini, Alejandro Gadea, Emmanuel Gunther, Miguel Pagano
+Maintainer:          Miguel Pagano <pagano@famaf.unc.edu.ar>
+Build-Type:          Simple
+Cabal-Version:       >=1.2
+Tested-with:         GHC==7.6.2
+Build-type:          Simple
+Bug-reports:         https://github.com/miguelpagano/equ/issues
+
+
+Source-repository this
+  Type:     git
+  Location: http://github.com/miguelpagano/equ
+  Branch:   master
+
+Library
+    -- Modules exported by the library.
+    Exposed-modules:    Equ.Expr,
+                        Equ.Exercise,
+                        Equ.Exercise.Conf,
+                        Equ.IndType,
+                        Equ.IndTypes,
+                        Equ.Parser,
+                        Equ.Parser.Proof,
+                        Equ.PreExpr,
+                        Equ.PreExpr.Eval,
+                        Equ.PreExpr.Show,
+                        Equ.PreExpr.Symbols,
+                        Equ.Proof,
+                        Equ.Proof.Annot,
+                        Equ.Proof.Condition,
+                        Equ.Proof.Error,
+                        Equ.Proof.Proof,
+                        Equ.Proof.Induction,
+                        Equ.Proof.ListedProof,
+                        Equ.Rule,
+                        Equ.Syntax,
+                        Equ.Theories,
+                        Equ.Theories.AbsName,
+                        Equ.Theories.FOL,
+                        Equ.Theories.List,
+                        Equ.Theories.Arith,
+                        Equ.TypeChecker,
+                        Equ.TypeChecker.Unification,
+                        Equ.Types,
+                        Equ.Matching
+    
+    Other-modules:      Equ.Matching.Error
+                        Equ.Parser.Expr,
+                        Equ.Parser.Types,
+                        Equ.PreExpr.Internal,
+                        Equ.PreExpr.Monad,
+                        Equ.PreExpr.Subst,
+                        Equ.PreExpr.Zipper,
+                        Equ.Proof.Monad,
+                        Equ.Proof.Zipper,
+                        Equ.Rewrite,
+                        Equ.Theories.Common,
+                        Equ.TypeChecker.Error
+
+  -- Modules not exported by this package.
+  -- 
+  -- Packages needed in order to build this package.
+  -- Last three for test.
+  Build-depends:        base >= 4.2, cereal >= 0.3.3.0, QuickCheck,
+                        containers >= 0.4.0.0, text >= 0.11.1.5, mtl >= 2.0.1.0,
+                        parsec >= 3.1.1, transformers >= 0.2.2.0, 
+                        either >= 3.0.2, lens
+
+  GHC-Options:         -Odph -Wall
+  -- HS-Source-Dirs:
+  
+  -- Extra tools (e.g. alex, hsc2hs, ...) needed to build the source.
+  -- Build-tools:    

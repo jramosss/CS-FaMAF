@@ -1,0 +1,59 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000000400000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD main.o
+
+.text           0x0000000000000000       0x90
+ *(.text*)
+ .text          0x0000000000000000       0x90 main.o
+                0x0000000000000020                ej3
+
+.iplt           0x0000000000000090        0x0
+ .iplt          0x0000000000000090        0x0 main.o
+
+.rela.dyn       0x0000000000000090        0x0
+ .rela.iplt     0x0000000000000090        0x0 main.o
+ .rela.data     0x0000000000000090        0x0 main.o
+
+.data           0x0000000000000090       0x10
+ .data          0x0000000000000090       0x10 main.o
+
+.igot.plt       0x00000000000000a0        0x0
+ .igot.plt      0x00000000000000a0        0x0 main.o
+
+.bss            0x00000000000000a0        0x0
+ *(.bss*)
+ .bss           0x00000000000000a0        0x0 main.o
+                0x0000000000400000                _stack_end = 0x400000
+OUTPUT(main.elf elf64-littleaarch64)
+
+.comment        0x0000000000000000       0x30
+ .comment       0x0000000000000000       0x30 main.o
+                                         0x31 (size before relaxing)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+
+.debug_line     0x0000000000000000       0x5d
+ .debug_line    0x0000000000000000       0x5d main.o
+
+.debug_info     0x0000000000000000       0x2e
+ .debug_info    0x0000000000000000       0x2e main.o
+
+.debug_abbrev   0x0000000000000000       0x14
+ .debug_abbrev  0x0000000000000000       0x14 main.o
+
+.debug_aranges  0x0000000000000000       0x30
+ .debug_aranges
+                0x0000000000000000       0x30 main.o
+
+.debug_str      0x0000000000000000       0x5f
+ .debug_str     0x0000000000000000       0x5f main.o

@@ -1,0 +1,10 @@
+varinput x:Int;
+vardef i:Int;
+vardef res : Bool;
+
+i:=2;
+res:=True;
+do (i < x  && res) ->
+ res := res && not (x % i = 0);
+ i := i + 1;
+od

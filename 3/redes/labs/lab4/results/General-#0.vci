@@ -1,0 +1,53 @@
+file 4365 1622215458                                            
+version 2
+run General-0-20210528-12:24:05-19691
+attr configname General
+attr datetime 20210528-12:24:05
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network
+attr processid 19691
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param Network.node[0].app.interArrivalTime exponential(1)
+param Network.node[0].app.packetByteSize 125000
+param Network.node[0].app.destination 5
+param Network.node[2].app.interArrivalTime exponential(1)
+param Network.node[2].app.packetByteSize 125000
+param Network.node[2].app.destination 5
+
+vector 0 Network.node[0].lnk[0] "Buffer Size" ETV
+vector 1 Network.node[1].lnk[0] "Buffer Size" ETV
+vector 2 Network.node[2].lnk[0] "Buffer Size" ETV
+vector 3 Network.node[3].lnk[0] "Buffer Size" ETV
+vector 4 Network.node[4].lnk[0] "Buffer Size" ETV
+vector 5 Network.node[5].lnk[0] "Buffer Size" ETV
+vector 6 Network.node[6].lnk[0] "Buffer Size" ETV
+vector 7 Network.node[7].lnk[0] "Buffer Size" ETV
+vector 8 Network.node[2].lnk[1] "Buffer Size" ETV
+vector 9 Network.node[3].lnk[1] "Buffer Size" ETV
+vector 10 Network.node[4].lnk[1] "Buffer Size" ETV
+vector 11 Network.node[5].app Delay ETV
+vector 12 Network.node[5].app HopsVector ETV
+vector 13 Network.node[5].app SourceVector ETV
+0	1329 455 1 413 0 5.301383768902 25 0 1 13 13
+1	1784 249 2 289 0 0.000756 16 0 1 8 8
+2	2033 249 3 290 0 0.000756 16 0 1 8 8
+3	2282 249 4 291 0 0.000756 16 0 1 8 8
+4	2531 249 5 292 0 0.000756 16 0 1 8 8
+5	2780 249 6 293 0 0.000756 16 0 1 8 8
+6	3029 341 7 382 0 3.898760388484 20 0 1 10 10
+7	3370 387 8 397 0 4.773428855839 22 0 1 11 11
+8	3757 136 338 392 1.859604212075 4.52576940626 6 0 1 3 3
+9	3893 136 351 418 2.859704212075 5.52586940626 6 0 1 3 3
+10	4029 96 375 403 3.859804212075 4.859804212075 4 0 1 2 2
+11	4125 95 385 410 3.898860388484 4.898860388484 3 3.0003 3.077076868529 9.077676868529 27.472002234836
+12	4220 72 385 410 3.898860388484 4.898860388484 3 3 3 9 27
+13	4292 72 385 410 3.898860388484 4.898860388484 3 0 2 2 4
+

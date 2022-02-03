@@ -1,0 +1,481 @@
+Coincidencia en el archivo binario _ln
+wc.c:    if((fd = open(argv[i], 0)) < 0){
+wc.c:      printf(1, "wc: cannot open %s\n", argv[i]);
+Coincidencia en el archivo binario _cat
+echo.asm:  fd = open(n, O_RDONLY);
+echo.asm: 20d:	e8 f0 00 00 00       	call   302 <open>
+echo.asm:00000302 <open>:
+echo.asm:SYSCALL(open)
+wc.asm:    if((fd = open(argv[i], 0)) < 0){
+wc.asm:  37:	e8 d6 03 00 00       	call   412 <open>
+wc.asm:      printf(1, "wc: cannot open %s\n", argv[i]);
+wc.asm:      printf(1, "wc: cannot open %s\n", argv[i]);
+wc.asm:  fd = open(n, O_RDONLY);
+wc.asm: 31d:	e8 f0 00 00 00       	call   412 <open>
+wc.asm:00000412 <open>:
+wc.asm:SYSCALL(open)
+syscall.c:extern int sys_open(void);
+syscall.c:[SYS_open]    sys_open,
+Coincidencia en el archivo binario cat.o
+param.h:#define NOFILE       16  // open files per process
+param.h:#define NFILE       100  // open files per system
+Coincidencia en el archivo binario _wc
+usertests.c:// does the error path in open() for attempt to write a
+usertests.c:// call in sys_open():
+usertests.c:openiputtest(void)
+usertests.c:  printf(stdout, "openiput test\n");
+usertests.c:    int fd = open("oidir", O_RDWR);
+usertests.c:      printf(stdout, "open directory for write succeeded\n");
+usertests.c:  printf(stdout, "openiput test ok\n");
+usertests.c:opentest(void)
+usertests.c:  printf(stdout, "open test\n");
+usertests.c:  fd = open("echo", 0);
+usertests.c:    printf(stdout, "open echo failed!\n");
+usertests.c:  fd = open("doesnotexist", 0);
+usertests.c:    printf(stdout, "open doesnotexist succeeded!\n");
+usertests.c:  printf(stdout, "open test ok\n");
+usertests.c:  fd = open("small", O_CREATE|O_RDWR);
+usertests.c:  fd = open("small", O_RDONLY);
+usertests.c:    printf(stdout, "open small succeeded ok\n");
+usertests.c:    printf(stdout, "error: open small failed!\n");
+usertests.c:  fd = open("big", O_CREATE|O_RDWR);
+usertests.c:  fd = open("big", O_RDONLY);
+usertests.c:    printf(stdout, "error: open big failed!\n");
+usertests.c:    fd = open(name, O_CREATE|O_RDWR);
+usertests.c:  fd = open("sharedfd", O_CREATE|O_RDWR);
+usertests.c:    printf(1, "fstests: cannot open sharedfd for writing");
+usertests.c:  fd = open("sharedfd", 0);
+usertests.c:    printf(1, "fstests: cannot open sharedfd for reading\n");
+usertests.c:      fd = open(fname, O_CREATE | O_RDWR);
+usertests.c:    fd = open(fname, 0);
+usertests.c:        fd = open(name, O_CREATE | O_RDWR);
+usertests.c:      fd = open(name, 0);
+usertests.c:  fd = open("unlinkread", O_CREATE | O_RDWR);
+usertests.c:  fd = open("unlinkread", O_RDWR);
+usertests.c:    printf(1, "open unlinkread failed\n");
+usertests.c:  fd1 = open("unlinkread", O_CREATE | O_RDWR);
+usertests.c:  fd = open("lf1", O_CREATE|O_RDWR);
+usertests.c:  if(open("lf1", 0) >= 0){
+usertests.c:  fd = open("lf2", 0);
+usertests.c:    printf(1, "open lf2 failed\n");
+usertests.c:      fd = open(file, O_CREATE | O_RDWR);
+usertests.c:  fd = open(".", 0);
+usertests.c:      close(open(file, 0));
+usertests.c:      close(open(file, 0));
+usertests.c:      close(open(file, 0));
+usertests.c:      close(open(file, 0));
+usertests.c:      close(open("x", O_RDWR | O_CREATE));
+usertests.c:  fd = open("bd", O_CREATE);
+usertests.c:  fd = open("dd/ff", O_CREATE | O_RDWR);
+usertests.c:  fd = open("dd/dd/ff", O_CREATE | O_RDWR);
+usertests.c:  fd = open("dd/dd/../ff", 0);
+usertests.c:    printf(1, "open dd/dd/../ff failed\n");
+usertests.c:  if(open("dd/dd/ff", O_RDONLY) >= 0){
+usertests.c:    printf(1, "open (unlinked) dd/dd/ff succeeded\n");
+usertests.c:  fd = open("dd/dd/ffff", 0);
+usertests.c:    printf(1, "open dd/dd/ffff failed\n");
+usertests.c:  if(open("dd/dd/ff", O_RDONLY) >= 0){
+usertests.c:    printf(1, "open (unlinked) dd/dd/ff succeeded!\n");
+usertests.c:  if(open("dd/ff/ff", O_CREATE|O_RDWR) >= 0){
+usertests.c:  if(open("dd/xx/ff", O_CREATE|O_RDWR) >= 0){
+usertests.c:  if(open("dd", O_CREATE) >= 0){
+usertests.c:  if(open("dd", O_RDWR) >= 0){
+usertests.c:    printf(1, "open dd rdwr succeeded!\n");
+usertests.c:  if(open("dd", O_WRONLY) >= 0){
+usertests.c:    printf(1, "open dd wronly succeeded!\n");
+usertests.c:    fd = open("bigwrite", O_CREATE | O_RDWR);
+usertests.c:  fd = open("bigfile", O_CREATE | O_RDWR);
+usertests.c:  fd = open("bigfile", 0);
+usertests.c:    printf(1, "cannot open bigfile\n");
+usertests.c:  fd = open("123456789012345/123456789012345/123456789012345", O_CREATE);
+usertests.c:  fd = open("12345678901234/12345678901234/12345678901234", 0);
+usertests.c:    printf(1, "open 12345678901234/12345678901234/12345678901234 failed\n");
+usertests.c:  fd = open("dirfile", O_CREATE);
+usertests.c:  fd = open("dirfile/xx", 0);
+usertests.c:  fd = open("dirfile/xx", O_CREATE);
+usertests.c:  fd = open(".", O_RDWR);
+usertests.c:    printf(1, "open . for writing succeeded!\n");
+usertests.c:  fd = open(".", 0);
+usertests.c:    fd = open("", O_CREATE);
+usertests.c:    fd = open("xx", O_CREATE);
+usertests.c:    fd = open("bigarg-ok", O_CREATE);
+usertests.c:  fd = open("bigarg-ok", 0);
+usertests.c:    int fd = open(name, O_CREATE|O_RDWR);
+usertests.c:      printf(1, "open %s failed\n", name);
+usertests.c:  fd = open("init", O_RDONLY);
+usertests.c:    printf(2, "open failed\n");
+usertests.c:  if(open("usertests.ran", 0) >= 0){
+usertests.c:  close(open("usertests.ran", O_CREATE));
+usertests.c:  opentest();
+usertests.c:  openiputtest();
+Coincidencia en el archivo binario mkfs
+grep.sym:000005c2 open
+grep.c:    if((fd = open(argv[i], 0)) < 0){
+grep.c:      printf(1, "grep: cannot open %s\n", argv[i]);
+sign.pl:open(SIG, $ARGV[0]) || die "open $ARGV[0]: $!";
+sign.pl:open(SIG, ">$ARGV[0]") || die "open >$ARGV[0]: $!";
+Coincidencia en el archivo binario ls.o
+Coincidencia en el archivo binario xv6.img
+forktest.asm:  fd = open(n, O_RDONLY);
+forktest.asm: 2ed:	e8 f0 00 00 00       	call   3e2 <open>
+forktest.asm:000003e2 <open>:
+forktest.asm:SYSCALL(open)
+wc.sym:00000412 open
+Coincidencia en el archivo binario _rm
+init.asm:  if(open("console", O_RDWR) < 0){
+init.asm:  19:	e8 64 03 00 00       	call   382 <open>
+init.asm:    open("console", O_RDWR);
+init.asm:    open("console", O_RDWR);
+init.asm:  e0:	e8 9d 02 00 00       	call   382 <open>
+init.asm:  fd = open(n, O_RDONLY);
+init.asm: 28d:	e8 f0 00 00 00       	call   382 <open>
+init.asm:00000382 <open>:
+init.asm:SYSCALL(open)
+sysfile.c:sys_open(void)
+Coincidencia en el archivo binario _sh
+Coincidencia en el archivo binario _stressfs
+ln.asm:  fd = open(n, O_RDONLY);
+ln.asm: 1fd:	e8 f0 00 00 00       	call   2f2 <open>
+ln.asm:000002f2 <open>:
+ln.asm:SYSCALL(open)
+init.c:  if(open("console", O_RDWR) < 0){
+init.c:    open("console", O_RDWR);
+echo.sym:00000302 open
+cat.asm:    if((fd = open(argv[i], 0)) < 0){
+cat.asm:  37:	e8 66 03 00 00       	call   3a2 <open>
+cat.asm:      printf(1, "cat: cannot open %s\n", argv[i]);
+cat.asm:      printf(1, "cat: cannot open %s\n", argv[i]);
+cat.asm:  fd = open(n, O_RDONLY);
+cat.asm: 2ad:	e8 f0 00 00 00       	call   3a2 <open>
+cat.asm:000003a2 <open>:
+cat.asm:SYSCALL(open)
+cuth:	open(F, ">$file") || die "open >$file: $!";
+cuth:	if(!open(F, $file)){
+cuth:		print STDERR "open $file: $!\n";
+Coincidencia en el archivo binario stressfs.o
+cat.sym:000003a2 open
+kill.asm:  fd = open(n, O_RDONLY);
+kill.asm: 1fd:	e8 f0 00 00 00       	call   2f2 <open>
+kill.asm:000002f2 <open>:
+kill.asm:SYSCALL(open)
+Coincidencia en el archivo binario _grep
+Coincidencia en el archivo binario _init
+user.h:int open(const char*, int);
+Coincidencia en el archivo binario syscall.o
+kill.sym:000002f2 open
+rm.sym:00000312 open
+Coincidencia en el archivo binario _usertests
+Coincidencia en el archivo binario _zombie
+zombie.asm:  fd = open(n, O_RDONLY);
+zombie.asm: 1cd:	e8 f0 00 00 00       	call   2c2 <open>
+zombie.asm:000002c2 <open>:
+zombie.asm:SYSCALL(open)
+mkdir.asm:  fd = open(n, O_RDONLY);
+mkdir.asm: 21d:	e8 f0 00 00 00       	call   312 <open>
+mkdir.asm:00000312 <open>:
+mkdir.asm:SYSCALL(open)
+proc.c:  // Close all open files.
+sh.asm:  // Ensure that three file descriptors are open.
+sh.asm:  while((fd = open("console", O_RDWR)) >= 0){
+sh.asm:  while((fd = open("console", O_RDWR)) >= 0){
+sh.asm:      27:	e8 26 0d 00 00       	call   d52 <open>
+sh.asm:    if(open(rcmd->file, rcmd->mode) < 0){
+sh.asm:     1ed:	e8 60 0b 00 00       	call   d52 <open>
+sh.asm:      printf(2, "open %s failed\n", rcmd->file);
+sh.asm:  fd = open(n, O_RDONLY);
+sh.asm:     c5d:	e8 f0 00 00 00       	call   d52 <open>
+sh.asm:00000d52 <open>:
+sh.asm:SYSCALL(open)
+sh.c:    if(open(rcmd->file, rcmd->mode) < 0){
+sh.c:      printf(2, "open %s failed\n", rcmd->file);
+sh.c:  // Ensure that three file descriptors are open.
+sh.c:  while((fd = open("console", O_RDWR)) >= 0){
+stressfs.sym:000003d2 open
+Coincidencia en el archivo binario _forktest
+cat.c:    if((fd = open(argv[i], 0)) < 0){
+cat.c:      printf(1, "cat: cannot open %s\n", argv[i]);
+Coincidencia en el archivo binario _echo
+mkdir.sym:00000312 open
+Coincidencia en el archivo binario sh.o
+Coincidencia en el archivo binario grep.o
+Coincidencia en el archivo binario _kill
+Coincidencia en el archivo binario pipe.o
+rm.asm:  fd = open(n, O_RDONLY);
+rm.asm: 21d:	e8 f0 00 00 00       	call   312 <open>
+rm.asm:00000312 <open>:
+rm.asm:SYSCALL(open)
+Coincidencia en el archivo binario wc.o
+kernel.sym:80104fb0 sys_open
+Coincidencia en el archivo binario ulib.o
+ln.sym:000002f2 open
+Notes:test: one process opens a file while another deletes it
+ls.asm:  if((fd = open(path, 0)) < 0){
+ls.asm: 112:	e8 ab 04 00 00       	call   5c2 <open>
+ls.asm:    printf(2, "ls: cannot open %s\n", path);
+ls.asm:  fd = open(n, O_RDONLY);
+ls.asm: 4cd:	e8 f0 00 00 00       	call   5c2 <open>
+ls.asm:000005c2 <open>:
+ls.asm:SYSCALL(open)
+ls.sym:000005c2 open
+syscall.h:#define SYS_open   15
+ls.c:  if((fd = open(path, 0)) < 0){
+ls.c:    printf(2, "ls: cannot open %s\n", path);
+init.sym:00000382 open
+Coincidencia en el archivo binario usertests.o
+Coincidencia en el archivo binario sysfile.o
+kernel.asm:  int writeopen;  // write fd is still open
+kernel.asm:  p->readopen = 1;
+kernel.asm:  p->writeopen = 1;
+kernel.asm:    p->writeopen = 0;
+kernel.asm:    p->writeopen = 0;
+kernel.asm:    p->readopen = 0;
+kernel.asm:  if(p->readopen == 0 && p->writeopen == 0){
+kernel.asm:    p->readopen = 0;
+kernel.asm:      if(p->readopen == 0 || myproc()->killed){
+kernel.asm:      if(p->readopen == 0 || myproc()->killed){
+kernel.asm:      if(p->readopen == 0 || myproc()->killed){
+kernel.asm:  while(p->nread == p->nwrite && p->writeopen){  //DOC: pipe-empty
+kernel.asm:  while(p->nread == p->nwrite && p->writeopen){  //DOC: pipe-empty
+kernel.asm:80104fb0 <sys_open>:
+kernel.asm:sys_open(void)
+kernel.asm:80104fc9:	0f 88 1d 01 00 00    	js     801050ec <sys_open+0x13c>
+kernel.asm:80104fe2:	0f 88 04 01 00 00    	js     801050ec <sys_open+0x13c>
+kernel.asm:80104ff1:	0f 85 a9 00 00 00    	jne    801050a0 <sys_open+0xf0>
+kernel.asm:80105009:	0f 84 b2 00 00 00    	je     801050c1 <sys_open+0x111>
+kernel.asm:80105020:	0f 84 aa 00 00 00    	je     801050d0 <sys_open+0x120>
+kernel.asm:8010502f:	0f 84 a6 00 00 00    	je     801050db <sys_open+0x12b>
+kernel.asm:8010503c:	eb 0e                	jmp    8010504c <sys_open+0x9c>
+kernel.asm:80105046:	0f 84 ac 00 00 00    	je     801050f8 <sys_open+0x148>
+kernel.asm:80105052:	75 ec                	jne    80105040 <sys_open+0x90>
+kernel.asm:801050bb:	0f 85 65 ff ff ff    	jne    80105026 <sys_open+0x76>
+kernel.asm:801050cb:	eb c0                	jmp    8010508d <sys_open+0xdd>
+kernel.asm:801050d5:	0f 84 4b ff ff ff    	je     80105026 <sys_open+0x76>
+kernel.asm:801050f1:	eb 9a                	jmp    8010508d <sys_open+0xdd>
+kernel.asm:80105104:	eb d5                	jmp    801050db <sys_open+0x12b>
+sh.sym:00000d52 open
+mkfs.c:  fsfd = open(argv[1], O_RDWR|O_CREAT|O_TRUNC, 0666);
+mkfs.c:    if((fd = open(argv[i], 0)) < 0){
+Coincidencia en el archivo binario usys.o
+Coincidencia en el archivo binario fs.img
+stressfs.c:  fd = open(path, O_CREATE | O_RDWR);
+stressfs.c:  fd = open(path, O_RDONLY);
+Coincidencia en el archivo binario init.o
+zombie.sym:000002c2 open
+usertests.asm:  if(open("usertests.ran", 0) >= 0){
+usertests.asm:      26:	e8 b7 38 00 00       	call   38e2 <open>
+usertests.asm:  close(open("usertests.ran", O_CREATE));
+usertests.asm:      51:	e8 8c 38 00 00       	call   38e2 <open>
+usertests.asm:  opentest();
+usertests.asm:      9a:	e8 51 03 00 00       	call   3f0 <opentest>
+usertests.asm:  openiputtest();
+usertests.asm:      ae:	e8 3d 02 00 00       	call   2f0 <openiputtest>
+usertests.asm:000002f0 <openiputtest>:
+usertests.asm:  printf(stdout, "openiput test\n");
+usertests.asm:     317:	0f 88 88 00 00 00    	js     3a5 <openiputtest+0xb5>
+usertests.asm:     324:	0f 88 92 00 00 00    	js     3bc <openiputtest+0xcc>
+usertests.asm:     32a:	75 34                	jne    360 <openiputtest+0x70>
+usertests.asm:    int fd = open("oidir", O_RDWR);
+usertests.asm:     336:	e8 a7 35 00 00       	call   38e2 <open>
+usertests.asm:     340:	78 5e                	js     3a0 <openiputtest+0xb0>
+usertests.asm:      printf(stdout, "open directory for write succeeded\n");
+usertests.asm:     37b:	75 56                	jne    3d3 <openiputtest+0xe3>
+usertests.asm:  printf(stdout, "openiput test ok\n");
+usertests.asm:000003f0 <opentest>:
+usertests.asm:  printf(stdout, "open test\n");
+usertests.asm:  fd = open("echo", 0);
+usertests.asm:     40f:	e8 ce 34 00 00       	call   38e2 <open>
+usertests.asm:     419:	78 36                	js     451 <opentest+0x61>
+usertests.asm:  fd = open("doesnotexist", 0);
+usertests.asm:     42d:	e8 b0 34 00 00       	call   38e2 <open>
+usertests.asm:     437:	79 2f                	jns    468 <opentest+0x78>
+usertests.asm:  printf(stdout, "open test ok\n");
+usertests.asm:    printf(stdout, "open echo failed!\n");
+usertests.asm:    printf(stdout, "open doesnotexist succeeded!\n");
+usertests.asm:  fd = open("small", O_CREATE|O_RDWR);
+usertests.asm:     4a4:	e8 39 34 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("small", O_RDONLY);
+usertests.asm:     534:	e8 a9 33 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("small", O_RDONLY);
+usertests.asm:    printf(stdout, "open small succeeded ok\n");
+usertests.asm:    printf(stdout, "error: open small failed!\n");
+usertests.asm:  fd = open("big", O_CREATE|O_RDWR);
+usertests.asm:     684:	e8 59 32 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("big", O_RDONLY);
+usertests.asm:     6e4:	e8 f9 31 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("big", O_RDONLY);
+usertests.asm:    printf(stdout, "error: open big failed!\n");
+usertests.asm:    fd = open(name, O_CREATE|O_RDWR);
+usertests.asm:    fd = open(name, O_CREATE|O_RDWR);
+usertests.asm:     876:	e8 67 30 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("sharedfd", O_CREATE|O_RDWR);
+usertests.asm:     e7d:	e8 60 2a 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("sharedfd", 0);
+usertests.asm:     f14:	e8 c9 29 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("sharedfd", 0);
+usertests.asm:    printf(1, "fstests: cannot open sharedfd for writing");
+usertests.asm:    printf(1, "fstests: cannot open sharedfd for reading\n");
+usertests.asm:    fd = open(fname, 0);
+usertests.asm:    fd = open(fname, 0);
+usertests.asm:    109f:	e8 3e 28 00 00       	call   38e2 <open>
+usertests.asm:    fd = open(fname, 0);
+usertests.asm:      fd = open(fname, O_CREATE | O_RDWR);
+usertests.asm:    1152:	e8 8b 27 00 00       	call   38e2 <open>
+usertests.asm:      fd = open(fname, O_CREATE | O_RDWR);
+usertests.asm:      fd = open(name, 0);
+usertests.asm:      fd = open(name, 0);
+usertests.asm:      fd = open(name, 0);
+usertests.asm:    1299:	e8 44 26 00 00       	call   38e2 <open>
+usertests.asm:        fd = open(name, O_CREATE | O_RDWR);
+usertests.asm:        fd = open(name, O_CREATE | O_RDWR);
+usertests.asm:        fd = open(name, O_CREATE | O_RDWR);
+usertests.asm:    1377:	e8 66 25 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("unlinkread", O_CREATE | O_RDWR);
+usertests.asm:    1450:	e8 8d 24 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("unlinkread", O_RDWR);
+usertests.asm:    1483:	e8 5a 24 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("unlinkread", O_RDWR);
+usertests.asm:  fd1 = open("unlinkread", O_CREATE | O_RDWR);
+usertests.asm:    14ba:	e8 23 24 00 00       	call   38e2 <open>
+usertests.asm:  fd1 = open("unlinkread", O_CREATE | O_RDWR);
+usertests.asm:    printf(1, "open unlinkread failed\n");
+usertests.asm:  fd = open("lf1", O_CREATE|O_RDWR);
+usertests.asm:    15f7:	e8 e6 22 00 00       	call   38e2 <open>
+usertests.asm:  if(open("lf1", 0) >= 0){
+usertests.asm:    1660:	e8 7d 22 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("lf2", 0);
+usertests.asm:    167a:	e8 63 22 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("lf2", 0);
+usertests.asm:    printf(1, "open lf2 failed\n");
+usertests.asm:      fd = open(file, O_CREATE | O_RDWR);
+usertests.asm:    181f:	e8 be 20 00 00       	call   38e2 <open>
+usertests.asm:      fd = open(file, O_CREATE | O_RDWR);
+usertests.asm:    1882:	e8 5b 20 00 00       	call   38e2 <open>
+usertests.asm:  fd = open(".", 0);
+usertests.asm:    190e:	e8 cf 1f 00 00       	call   38e2 <open>
+usertests.asm:  fd = open(".", 0);
+usertests.asm:      close(open(file, 0));
+usertests.asm:    1a03:	e8 da 1e 00 00       	call   38e2 <open>
+usertests.asm:      close(open(file, 0));
+usertests.asm:    1a15:	e8 c8 1e 00 00       	call   38e2 <open>
+usertests.asm:      close(open(file, 0));
+usertests.asm:    1a27:	e8 b6 1e 00 00       	call   38e2 <open>
+usertests.asm:      close(open(file, 0));
+usertests.asm:    1a39:	e8 a4 1e 00 00       	call   38e2 <open>
+usertests.asm:      close(open("x", O_RDWR | O_CREATE));
+usertests.asm:    1b62:	e8 7b 1d 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("bd", O_CREATE);
+usertests.asm:    1c0d:	e8 d0 1c 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dd/ff", O_CREATE | O_RDWR);
+usertests.asm:    1d53:	e8 8a 1b 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dd/ff", O_CREATE | O_RDWR);
+usertests.asm:  fd = open("dd/dd/ff", O_CREATE | O_RDWR);
+usertests.asm:    1db9:	e8 24 1b 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dd/dd/ff", O_CREATE | O_RDWR);
+usertests.asm:  fd = open("dd/dd/../ff", 0);
+usertests.asm:    1dec:	e8 f1 1a 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dd/dd/../ff", 0);
+usertests.asm:  if(open("dd/dd/ff", O_RDONLY) >= 0){
+usertests.asm:    1e71:	e8 6c 1a 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dd/dd/ffff", 0);
+usertests.asm:    1eeb:	e8 f2 19 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dd/dd/ffff", 0);
+usertests.asm:  if(open("dd/dd/ff", O_RDONLY) >= 0){
+usertests.asm:    1f2e:	e8 af 19 00 00       	call   38e2 <open>
+usertests.asm:  if(open("dd/ff/ff", O_CREATE|O_RDWR) >= 0){
+usertests.asm:    1f4b:	e8 92 19 00 00       	call   38e2 <open>
+usertests.asm:  if(open("dd/xx/ff", O_CREATE|O_RDWR) >= 0){
+usertests.asm:    1f68:	e8 75 19 00 00       	call   38e2 <open>
+usertests.asm:  if(open("dd", O_CREATE) >= 0){
+usertests.asm:    1f85:	e8 58 19 00 00       	call   38e2 <open>
+usertests.asm:  if(open("dd", O_RDWR) >= 0){
+usertests.asm:    1f9f:	e8 3e 19 00 00       	call   38e2 <open>
+usertests.asm:  if(open("dd", O_WRONLY) >= 0){
+usertests.asm:    1fb9:	e8 24 19 00 00       	call   38e2 <open>
+usertests.asm:    printf(1, "open (unlinked) dd/dd/ff succeeded!\n");
+usertests.asm:    printf(1, "open dd/dd/../ff failed\n");
+usertests.asm:    printf(1, "open dd wronly succeeded!\n");
+usertests.asm:    printf(1, "open dd rdwr succeeded!\n");
+usertests.asm:    printf(1, "open (unlinked) dd/dd/ff succeeded\n");
+usertests.asm:    printf(1, "open dd/dd/ffff failed\n");
+usertests.asm:    fd = open("bigwrite", O_CREATE | O_RDWR);
+usertests.asm:    242d:	e8 b0 14 00 00       	call   38e2 <open>
+usertests.asm:    fd = open("bigwrite", O_CREATE | O_RDWR);
+usertests.asm:  fd = open("bigfile", O_CREATE | O_RDWR);
+usertests.asm:    24fd:	e8 e0 13 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("bigfile", 0);
+usertests.asm:    2566:	e8 77 13 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("bigfile", 0);
+usertests.asm:    printf(1, "cannot open bigfile\n");
+usertests.asm:  fd = open("123456789012345/123456789012345/123456789012345", O_CREATE);
+usertests.asm:    26ee:	e8 ef 11 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("12345678901234/12345678901234/12345678901234", 0);
+usertests.asm:    2710:	e8 cd 11 00 00       	call   38e2 <open>
+usertests.asm:    printf(1, "open 12345678901234/12345678901234/12345678901234 failed\n");
+usertests.asm:  fd = open("dirfile", O_CREATE);
+usertests.asm:    297f:	e8 5e 0f 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dirfile/xx", 0);
+usertests.asm:    29b9:	e8 24 0f 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("dirfile/xx", O_CREATE);
+usertests.asm:    29d6:	e8 07 0f 00 00       	call   38e2 <open>
+usertests.asm:  fd = open(".", O_RDWR);
+usertests.asm:    2a55:	e8 88 0e 00 00       	call   38e2 <open>
+usertests.asm:  fd = open(".", 0);
+usertests.asm:    2a6f:	e8 6e 0e 00 00       	call   38e2 <open>
+usertests.asm:  fd = open(".", 0);
+usertests.asm:    printf(1, "open . for writing succeeded!\n");
+usertests.asm:    fd = open("", O_CREATE);
+usertests.asm:    2bda:	e8 03 0d 00 00       	call   38e2 <open>
+usertests.asm:    fd = open("xx", O_CREATE);
+usertests.asm:    2bff:	e8 de 0c 00 00       	call   38e2 <open>
+usertests.asm:  fd = open("bigarg-ok", 0);
+usertests.asm:    32b1:	e8 2c 06 00 00       	call   38e2 <open>
+usertests.asm:    fd = open("bigarg-ok", O_CREATE);
+usertests.asm:    333b:	e8 a2 05 00 00       	call   38e2 <open>
+usertests.asm:    int fd = open(name, O_CREATE|O_RDWR);
+usertests.asm:    342b:	e8 b2 04 00 00       	call   38e2 <open>
+usertests.asm:    int fd = open(name, O_CREATE|O_RDWR);
+usertests.asm:      printf(1, "open %s failed\n", name);
+usertests.asm:  fd = open("init", O_RDONLY);
+usertests.asm:    35ce:	e8 0f 03 00 00       	call   38e2 <open>
+usertests.asm:    printf(2, "open failed\n");
+usertests.asm:  fd = open(n, O_RDONLY);
+usertests.asm:    37ed:	e8 f0 00 00 00       	call   38e2 <open>
+usertests.asm:000038e2 <open>:
+usertests.asm:SYSCALL(open)
+Coincidencia en el archivo binario _mkdir
+Coincidencia en el archivo binario _ls
+fs.c://   the number of in-memory pointers to the entry (open
+fs.c:// get a long-term reference to an inode (as for an open file)
+fs.c:// not an open file or current directory).
+grep.asm:    if((fd = open(argv[i], 0)) < 0){
+grep.asm:  3f:	e8 7e 05 00 00       	call   5c2 <open>
+grep.asm:      printf(1, "grep: cannot open %s\n", argv[i]);
+grep.asm:      printf(1, "grep: cannot open %s\n", argv[i]);
+grep.asm:  fd = open(n, O_RDONLY);
+grep.asm: 4cd:	e8 f0 00 00 00       	call   5c2 <open>
+grep.asm:000005c2 <open>:
+grep.asm:SYSCALL(open)
+usertests.sym:000002f0 openiputtest
+usertests.sym:000003f0 opentest
+usertests.sym:000038e2 open
+usys.S:SYSCALL(open)
+Coincidencia en el archivo binario kernel
+stressfs.asm:  fd = open(path, O_CREATE | O_RDWR);
+stressfs.asm:  fd = open(path, O_CREATE | O_RDWR);
+stressfs.asm:  a3:	e8 2a 03 00 00       	call   3d2 <open>
+stressfs.asm:  fd = open(path, O_RDONLY);
+stressfs.asm:  ee:	e8 df 02 00 00       	call   3d2 <open>
+stressfs.asm:  fd = open(n, O_RDONLY);
+stressfs.asm: 2dd:	e8 f0 00 00 00       	call   3d2 <open>
+stressfs.asm:000003d2 <open>:
+stressfs.asm:SYSCALL(open)
+pipe.c:  int readopen;   // read fd is still open
+pipe.c:  int writeopen;  // write fd is still open
+pipe.c:  p->readopen = 1;
+pipe.c:  p->writeopen = 1;
+pipe.c:    p->writeopen = 0;
+pipe.c:    p->readopen = 0;
+pipe.c:  if(p->readopen == 0 && p->writeopen == 0){
+pipe.c:      if(p->readopen == 0 || myproc()->killed){
+pipe.c:  while(p->nread == p->nwrite && p->writeopen){  //DOC: pipe-empty
+ulib.c:  fd = open(n, O_RDONLY);

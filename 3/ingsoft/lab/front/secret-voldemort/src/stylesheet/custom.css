@@ -1,0 +1,64 @@
+.fig-inline{
+    display: inline-block;
+    padding: 1.5%;
+}
+.fig-inline-block{
+    display: inline-block !important;
+    padding: 1.5%;
+}
+
+
+.fig-inline img {
+    height: 120px;
+    width: 120px;
+    border:1px solid black;
+}
+
+.align-cntr{
+    text-align: center;
+}
+
+.validation {
+    color: #b88d0a;
+    margin-left: 5%;
+    margin-top: 1%;
+    display: none;
+}
+.won_img{
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    overflow-y:hidden;
+}
+
+.triumph_button{
+    cursor: pointer;
+    color:#0a0e0a;
+    background-color: #b88d0a;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.triumph_text_de{
+    color:#00c8de;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.triumph_text_fo{
+    color:  #f7fb18;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-spell{
+    cursor: pointer;
+    background: #e0c580;
+}

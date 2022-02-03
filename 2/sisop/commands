@@ -1,0 +1,19 @@
+fg	                    //cierra un proceso
+killall -9              //Mata todos los procesos
+su -                    //alto admin
+bc -l                   //calculadora
+wc                      //word count de un archivo
+sort                    //Ordena
+touch   name.txt        //Crea un archivo
+wget url                //Te descarga un archivo y lo conserva
+curl url                //Descarga un archivo 
+cm1 | cm2               //Ejecuta el comando1, y le pasa al comando 2 su output
+cm1 & cm2               //Ejecuta de manera asincrona el cm1 y cm2
+cm1 ; cm2               //Ejecuta cm2 luego de cm1
+sed word1 word2 file    //Reemplaza todas las palabaras del archivo por palabra2
+cat archivo             //Mostrar el interior del archivo (entero)
+less archivo            //Mostrar el archivo (de a 10 lineas)
+mv filename newfilename //Cambia el nombre del archivo
+mv loc newloc           //Mueve el archivo de directorio
+pwd                     //Proccess working directory
+

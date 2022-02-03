@@ -1,0 +1,4 @@
+ESKETIT
+duplica :: [Int] -> [Int]
+duplica [] = []
+duplica x = 2*x

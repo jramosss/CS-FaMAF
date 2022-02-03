@@ -1,0 +1,46 @@
+
+
+begin proof
+    False
+    ≡ { Definición de False }
+    ¬ True
+end proof
+
+begin proof teoremaLoco
+        [] ++ (ys ++ zs)
+        = { Neutro a izquierda de concatenación }
+        ys ++ zs
+        = { Neutro a izquierda de concatenación }
+        ([] ++ ys) ++ zs
+end proof
+
+begin proof induction in xs for xs ++ (ys ++ zs) .=. (xs ++ ys) ++ zs where
+basic
+[] -> [] ++ (ys ++ zs)
+      = { Neutro a izquierda de concatenación }
+      ys ++ zs
+      = { Neutro a izquierda de concatenación }
+      ([] ++ ys) ++ zs
+induction x|>xs with hypind -> x|>xs ++ (ys ++ zs)
+                              = { Concatenar lista no vacía }
+                               x |> (xs ++ (ys ++ zs))
+                              = { hypind }
+                               x |> ((xs ++ ys) ++ zs)
+                              = { Concatenar lista no vacía }
+                               x |> (xs ++ ys) ++ zs
+                              = { Concatenar lista no vacía }
+                               (x |> xs ++ ys) ++ zs
+end proof
+
+
+begin proof induction in n for n + 0 .=. n where
+basic
+0 -> 0 + 0
+     = { Neutro a izquierda de la suma }
+     0
+induction succ n with hypind -> succ n + 0
+                                = { Evaluar suma }
+                                succ (n + 0)
+                                = { hypind }
+                                succ n
+end proof

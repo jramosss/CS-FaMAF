@@ -1,0 +1,6 @@
+[submodule "fun"]
+	path = fun
+	url = https://github.com/alexgadea/fun.git
+[submodule "hal"]
+	path = hal
+	url = git://github.com/alexgadea/hal.git

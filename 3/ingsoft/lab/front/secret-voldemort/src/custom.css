@@ -1,0 +1,85 @@
+.fig-inline{
+    display: inline-block;
+    padding: 1.5%;
+}
+.fig-inline-block{
+    display: inline-block !important;
+    padding: 1.5%;
+}
+
+
+.fig-inline img {
+    height: 120px;
+    width: 120px;
+    border:1px solid black;
+}
+
+.align-cntr{
+    text-align: center;
+}
+
+.validation {
+    color: #b88d0a;
+    margin-left: 5%;
+    margin-top: 1%;
+    display: none;
+}
+.won_img{
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    overflow-y:hidden;
+}
+
+.triumph_button{
+    cursor: pointer;
+    color:#0a0e0a;
+    background-color: #b88d0a;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.triumph_text_de{
+    font-size: large;
+    color: #00c8de;
+    position: absolute;
+    margin-top: 1%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.triumph_text_fo{
+    font-size: large;
+    color: #f7fb18;
+    position: absolute;
+    margin-top: 1%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.disable_btn_crucio{
+    margin-left: 40px;
+}
+
+.disable_btn_imperio{
+    margin-left: 40px;
+}
+
+.li-spacing-modal{
+    margin: 15px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.hidden{
+    display: None;
+}
+
+.dashboard_card{
+    border: 1px solid #0c464b;
+}

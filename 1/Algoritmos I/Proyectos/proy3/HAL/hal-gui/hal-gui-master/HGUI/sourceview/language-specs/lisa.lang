@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language id="lisa" _name="LISA" version="2.0" _section="Sources">
+  <metadata>
+    <property name="mimetypes">text/lisa</property>
+    <property name="globs">*.lisa</property>
+  </metadata>
+    <styles>
+      <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+      <style id="escaped-character" _name="Escaped Character" map-to="def:special-char"/>
+      <style id="operators" _name="Operators" map-to="def:operators"/>
+      <style id="constant" _name="Constant" map-to="def:constant"/>
+      <style id="type" _name="Data Type" map-to="def:type"/>
+      <style id="assertion" _name="Assertion" map-to="def:justificationProof"/>
+    </styles>
+    <definitions>
+        <context id="lisa">
+            <include>
+	      <define-regex id="symbolchar">
+		[-!+\\|=&amp;&gt;&lt;]
+	      </define-regex>
+	      
+	      
+              <context id="keywords" style-ref="keyword">
+                <keyword>varinput</keyword>
+                <keyword>vardef</keyword>
+                <keyword>while</keyword>
+                <keyword>if</keyword>
+		<keyword>fi</keyword>
+                <keyword> \-\> </keyword>
+                <keyword> \| </keyword>
+                <keyword>do</keyword>
+                <keyword>od</keyword>
+                <keyword>skip</keyword>
+                <keyword>abort</keyword>
+                <keyword>evaluar</keyword>
+	      </context>
+	      
+              <context id="assert" style-ref="assertion">
+                <start>\{</start>
+                <end>\}</end>
+              </context>
+	      
+              <context ref="def:decimal"/>
+	      
+              <context id="types" style-ref="type">
+                <keyword>Int</keyword>
+                <keyword>Bool</keyword>
+              </context>
+	      
+	      <context id="constant" style-ref="constant">
+                <keyword>True</keyword>
+                <keyword>False</keyword>
+              </context>
+	      
+	      <context id="operators" style-ref="operators">
+		<prefix>(?&lt;!\%{symbolchar})</prefix>
+		<suffix>(?!\%{symbolchar})</suffix>
+                <keyword>not</keyword>
+		<keyword>\+</keyword>
+		<keyword>\-</keyword>
+		<keyword>\*</keyword>
+		<keyword>=</keyword>
+		<keyword>\/</keyword>
+		<keyword>\%</keyword>
+		<keyword>&lt;</keyword>
+		<keyword>&amp;&amp;</keyword>
+		<keyword>\|\|</keyword>
+              </context>
+	      
+            </include>
+        </context>
+    </definitions>
+</language>

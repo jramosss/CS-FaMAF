@@ -1,0 +1,12 @@
+varinput x : Int;
+varinput y : Int;
+varinput z : Int;
+varinput m : Int;
+
+if (x < y) -> m := x ;
+|  not (x < y) -> m := y ;
+fi 
+
+if (m < z) -> skip ;
+| not (m < z) -> m := z ;
+fi 

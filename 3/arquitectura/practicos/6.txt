@@ -1,0 +1,79 @@
+3)
+
+TNTTN
+
+a) Always taken: 3/5 = 60%, Always not taken: 2/5 = 40%
+b) 
+Estados:
+Strongly not taken, usa taken, 1 error
+Weakly nt, not taken, 1 acierto
+Strongly nt, taken, 1 error
+Weakly not taken,taken, 1 error
+
+3 errores, 1 acierto, 25% de precision
+
+c) 
+Asumiendo que empezamos en strongly nt
+
+1 - Strongly not taken, usa taken, 1 error
+2 - Weakly nt, not taken, 1 acierto
+3 - Strongly nt, taken, 1 error
+4 - Weakly not taken,taken, 1 error
+5 - Weakly t, nt, 1 error
+1 -Weakly nt, t, 1 error
+2 - Weakly t, nt, 1 error
+3 - Weakly nt, t, 1 error
+4 - Weakly t, t, 1 acierto
+5 - Strongly t, nt, 1 error
+1 - Weakly t, t, 1 acierto
+2 - Strongly t, nt, 1 error
+3 - Weakly t, t, 1 acierto
+4 - Strongly t, t, 1 acierto
+5 - Strongly t, nt, 1 error
+1 - Weakly t, t, 1 acierto
+2 - Strongly t, nt, 1 error
+3 - Weakly t, t, 1 acierto
+4 - Strongly t, t, 1 acierto
+5 - Strongly t, nt, 1 error
+
+4 iteraciones, 20 instrucciones, 12 errores, 8 aciertos
+8 / 20 * 100 = 40%
+
+
+Codigo C:
+for (i = 0; i <= 100; i++) {
+    for (j = 0; j < 3; j++) {
+        …
+    }
+}
+
+Codigo ASM:
+0x00: L2: add x0, xzr, xzr
+0x04: L1: add x1, xzr, xzr
+0x08:     ...
+0x0C:     addi x1, x1, 1
+0x10:     cmpi x1, 3
+0x14:     b.lt L1
+0x18:     addi x0, x0, 1
+0x1C:     cmpi x0, 99
+0x20:     b.lt L2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

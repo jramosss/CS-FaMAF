@@ -1,0 +1,132 @@
+
+main.elf:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000000000 <for-0x18>:
+   0:	58000240 	ldr	x0, 48 <end+0x8>
+   4:	5800032a 	ldr	x10, 68 <offset>
+   8:	580002c9 	ldr	x9, 60 <N>
+   c:	8b0a0000 	add	x0, x0, x10
+  10:	8b1f03e1 	add	x1, xzr, xzr
+  14:	8b1f03e2 	add	x2, xzr, xzr
+
+0000000000000018 <for>:
+  18:	eb09005f 	cmp	x2, x9
+  1c:	54000120 	b.eq	40 <end>  // b.none
+  20:	8b02000b 	add	x11, x0, x2
+  24:	3840016c 	ldurb	w12, [x11]
+  28:	7100c19f 	cmp	w12, #0x30
+  2c:	54000041 	b.ne	34 <skip>  // b.any
+  30:	91000421 	add	x1, x1, #0x1
+
+0000000000000034 <skip>:
+  34:	91000442 	add	x2, x2, #0x1
+  38:	17fffff8 	b	18 <for>
+  3c:	8b000000 	add	x0, x0, x0
+
+0000000000000040 <end>:
+  40:	14000000 	b	40 <end>
+  44:	00000000 	.inst	0x00000000 ; undefined
+  48:	00000050 	.word	0x00000050
+  4c:	00000000 	.word	0x00000000
+
+Disassembly of section .data:
+
+0000000000000050 <str>:
+  50:	6c6f4830 	ldnp	d16, d18, [x1, #-272]
+  54:	754d3061 	.inst	0x754d3061 ; undefined
+  58:	306f646e 	adr	x14, dece5 <offset+0xdec7d>
+  5c:	00000000 	.inst	0x00000000 ; undefined
+
+0000000000000060 <N>:
+  60:	0000000f 	.inst	0x0000000f ; undefined
+  64:	00000000 	.inst	0x00000000 ; undefined
+
+0000000000000068 <offset>:
+  68:	40080000 	.inst	0x40080000 ; undefined
+  6c:	00000000 	.inst	0x00000000 ; undefined
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	00000044 	.inst	0x00000044 ; undefined
+   4:	001d0002 	.inst	0x001d0002 ; undefined
+   8:	01040000 	.inst	0x01040000 ; undefined
+   c:	000d0efb 	.inst	0x000d0efb ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+  14:	01000000 	.inst	0x01000000 ; undefined
+  18:	00010000 	.inst	0x00010000 ; undefined
+  1c:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+  20:	0000732e 	.inst	0x0000732e ; undefined
+  24:	00000000 	.inst	0x00000000 ; undefined
+  28:	00000209 	.inst	0x00000209 ; undefined
+  2c:	00000000 	.inst	0x00000000 ; undefined
+  30:	21180000 	.inst	0x21180000 ; undefined
+  34:	21212121 	.inst	0x21212121 ; undefined
+  38:	21212121 	.inst	0x21212121 ; undefined
+  3c:	21212121 	.inst	0x21212121 ; undefined
+  40:	02222121 	.inst	0x02222121 ; undefined
+  44:	01010004 	.inst	0x01010004 ; undefined
+
+Disassembly of section .debug_info:
+
+0000000000000000 <.debug_info>:
+   0:	0000002a 	.inst	0x0000002a ; undefined
+   4:	00000002 	.inst	0x00000002 ; undefined
+   8:	01080000 	.inst	0x01080000 ; undefined
+	...
+  18:	00000050 	.inst	0x00000050 ; undefined
+	...
+  24:	00000007 	.inst	0x00000007 ; undefined
+  28:	00000051 	.inst	0x00000051 ; undefined
+  2c:	Address 0x000000000000002c is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	10001101 	adr	x1, 220 <offset+0x1b8>
+   4:	12011106 	and	w6, w8, #0x8000000f
+   8:	1b0e0301 	madd	w1, w24, w14, w0
+   c:	130e250e 	sbfiz	w14, w8, #18, #10
+  10:	00000005 	.inst	0x00000005 ; undefined
+
+Disassembly of section .debug_aranges:
+
+0000000000000000 <.debug_aranges>:
+   0:	0000002c 	.inst	0x0000002c ; undefined
+   4:	00000002 	.inst	0x00000002 ; undefined
+   8:	00080000 	.inst	0x00080000 ; undefined
+	...
+  18:	00000050 	.inst	0x00000050 ; undefined
+	...
+
+Disassembly of section .debug_str:
+
+0000000000000000 <.debug_str>:
+   0:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+   4:	2f00732e 	.inst	0x2f00732e ; undefined
+   8:	656d6f68 	fnmls	z8.h, p3/m, z27.h, z13.h
+   c:	6f76672f 	sqshlu	v15.2d, v25.2d, #54
+  10:	6f6e6164 	umlsl2	v4.4s, v11.8h, v14.h[2]
+  14:	2f636976 	umlsl	v22.4s, v11.4h, v3.h[6]
+  18:	75636f44 	.inst	0x75636f44 ; undefined
+  1c:	746e656d 	.inst	0x746e656d ; undefined
+  20:	6f442f73 	.inst	0x6f442f73 ; undefined
+  24:	636e6563 	.inst	0x636e6563 ; undefined
+  28:	552f6169 	.inst	0x552f6169 ; undefined
+  2c:	462d434e 	.inst	0x462d434e ; undefined
+  30:	46414d41 	.inst	0x46414d41 ; undefined
+  34:	43644f2f 	.inst	0x43644f2f ; undefined
+  38:	3230322f 	orr	w15, w17, #0x1fff0000
+  3c:	454c2f30 	.inst	0x454c2f30 ; undefined
+  40:	5f387647 	sqshl	s7, s18, #24
+  44:	6e617661 	uabd	v1.8h, v19.8h, v1.8h
+  48:	6f64617a 	umlsl2	v26.4s, v11.8h, v4.h[2]
+  4c:	366a652f 	tbz	w15, #13, 4cf0 <offset+0x4c88>
+  50:	554e4700 	.inst	0x554e4700 ; undefined
+  54:	20534120 	.inst	0x20534120 ; undefined
+  58:	30332e32 	adr	x18, 6661d <offset+0x665b5>
+	...

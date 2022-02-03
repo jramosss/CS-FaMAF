@@ -1,0 +1,49 @@
+* Manipulación de términos con operadores que construyen
+  proposiciones. Esos operadores pueden ser funciones 
+  definidas inductivamente y un paso de equivalencia podría
+  ser la evaluación de una de esas funciones. Probablemente
+  la justificación de ese paso no se muestre, pero querríamos
+  tener la posibilidad de ver la justificación. Estas teorías
+  definen además un conjunto de tipos, posiblemente junto con 
+  una relación de subtipado.
+
+* Poder instanciar variables con los posibles valores.
+
+* Poder ver árbol de tipado de una expresión, fórmula.
+  Mostrarlo con huecos para rellenar y chequear que los
+  huecos han sido completados correctamente.
+
+* Poder definir funciones. Chequeo de exhaustividad.
+
+* Modularización: el core consiste en fórmulas proposicionales
+  cuyas variables pueden instanciarse con fórmulas construidas
+  a partir de la aplicación de operadores booleanos de términos
+  de cierta teoría.
+
+* Esas teorías deberían ser construcciones sobre "dominios"
+  inductivos.
+
+sum.(duplica.[]) == 2 * sum.[]
+
+== { resolve duplica.[] }
+
+sum.[]  == 2 * sum.[]
+
+== { resolve suma.[] en ambos lados }
+
+0 == 2 * 0
+
+== { resolve * }
+
+0 == 0
+
+
+* Sketchs de pruebas, es decir pruebas con huecos en las que el
+  usuario completa los huecos y luego chequeamos que haya sido
+  bien completada.
+
+* Permitir pruebas de implicaciones usando debilitamiento y
+  meta-teorema de la deducción.
+
+* Poder guardar módulos con teoremas ya demostrados para reusarlos
+  más adelante.

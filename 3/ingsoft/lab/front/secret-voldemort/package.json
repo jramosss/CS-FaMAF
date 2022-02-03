@@ -1,0 +1,59 @@
+{
+  "name": "secret-voldemort",
+  "version": "1.0.0",
+  "description": "Secret Voldemort Frontend",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.1",
+    "@testing-library/user-event": "^13.2.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^10.0.0",
+    "browserslist": "^4.17.1",
+    "cypress": "^8.5.0",
+    "dependencies": "^0.0.1",
+    "js-cookie": "^3.0.1",
+    "jsframe.js": "^1.6.2",
+    "jwt-decode": "^3.1.2",
+    "react": "^17.0.2",
+    "react-dialog": "^1.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^4.0.3",
+    "reactjs-popup": "^2.0.5",
+    "redux": "^4.1.1",
+    "sass": "^1.42.1",
+    "socket.io": "^4.2.0",
+    "websocket": "^1.0.34"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.8.3",
+    "bulma": "^0.9.1",
+    "cypress-react-unit-test": "^4.16.10",
+    "node-sass": "^4.14.1",
+    "nyc": "^15.1.0",
+    "react-dev-utils": "^10.2.1",
+    "redux-devtools": "^3.7.0",
+    "socket.io-client": "^3.0.3"
+  },
+  "keywords": []
+}

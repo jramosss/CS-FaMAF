@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>proj</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>querys4.sql</name>
+			<type>1</type>
+			<location>/home/shuls/Documents/dbs/labs/querys4.sql</location>
+		</link>
+		<link>
+			<name>sakila-data.sql</name>
+			<type>1</type>
+			<location>/home/shuls/Documents/dbs/labs/sakila-data.sql</location>
+		</link>
+		<link>
+			<name>sakila-schema.sql</name>
+			<type>1</type>
+			<location>/home/shuls/Documents/dbs/labs/sakila-schema.sql</location>
+		</link>
+	</linkedResources>
+</projectDescription>

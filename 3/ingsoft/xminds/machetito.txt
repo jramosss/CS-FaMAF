@@ -1,0 +1,39 @@
+Desafíos de la IS:
+
+• Ingeniería de Software: aplicación de un enfoque sistemático,
+disciplinado, y cuantificable al desarrollo, operación, y
+mantenimiento del software.
+
+• Enfoque sistemático: metodología y prácticas existentes para
+solucionar un problema dentro de un dominio determinado.
+Esto permite repetir el proceso y da la posibilidad de predecirlo
+(independientemente del grupo de personas que lo lleva a cabo).
+
+Escala
+
+• IS debe considerar la escala del sistema a desarrollar
+Los métodos utilizados para desarrollar pequeños problemas no siempre
+escalan a grandes problemas.
+
+Productividad
+• IS está motivada por el costo y el cronograma (schedule)
+Tanto una solución que demora mucho tiempo como una que entrega un
+software barato y de baja calidad son inaceptables.
+
+
+Calidad del software:
+- Funcionalidad: la capacidad de proveer funciones que cumplen las necesi-
+dades establecidas o implicadas.
+
+- Confiabilidad: la capacidad de realizar las funciones requeridas bajo las
+condiciones establecidas durante un tiempo especı́fico.
+
+- Usabilidad: la capacidad de ser comprendido, aprendido y usado.
+
+- Eficiencia: la capacidad de proveer una apropiada performance relativa a
+los recursos que utiliza.
+
+- Mantenibilidad: la capacidad de poder ser modificado con algún propósito.
+
+- Portabilidad: la capacidad de poder ser adaptado a diferentes ambientes
+sin aplicar otras acciones que las provistas a este propósito en el producto.

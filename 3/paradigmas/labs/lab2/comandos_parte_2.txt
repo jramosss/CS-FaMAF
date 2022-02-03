@@ -1,0 +1,21 @@
+curl -X GET http://localhost:8080/api/clients
+
+curl -X GET http://localhost:8080/api/clients/1
+
+curl -X GET http://localhost:8080/api/clients/0 //para testear el caso de id 	    					    inexistente, 400 - Bad Request
+
+curl -X POST http://localhost:8080/api/clients -H "Content-type: application/json" -d '{"username": "Shuls","country_code":"AR"}'
+
+curl -X POST http://localhost:8080/api/clients -H "Content-type: application/json" -d '{"username": "","country_code":"AR"}' //Caso campo de username nulo, anda 					    igual
+
+curl -X GET http://localhost:8080/api/jobs
+
+curl -X POST http://localhost:8080/api/jobs -H "Content-type: application/json" -d '{"category_id":1,"client_id":1,"tittle":"Teoria de grafos","preferred_expertise":"Senior" ,"hourly_price":30.00}'
+
+curl -X POST http://localhost:8080/api/jobs -H "Content-type: application/json" -d '{"category_id":1,"client_id":1,"tittle":"Teoria de grafos","preferred_expertise":"" ,"hourly_price":30.00}' // Sin preferred expertise
+							   // Asigna Senior por default
+
+curl -X POST http://localhost:8080/api/jobs -H "Content-type: application/json" -d '{"category_id":,"client_id":1,"tittle":"Teoria de grafos","preferred_expertise":"Senior" ,"hourly_price":30.00}' //Falta client_id
+								 //None.get exception
+
+

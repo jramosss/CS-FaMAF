@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ This file is part of GtkSourceView
+
+ Authors: Duncan Coutts, Anders Carlsson
+ Copyright (C) 2004, 2007 Duncan Coutts <duncan@haskell.org>
+ Copyright (C) 2004 Anders Carlsson <andersca@gnome.org>
+
+ GtkSourceView is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ GtkSourceView is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-->
+<language id="fun" _name="Fun" version="2.0" _section="Sources">
+  <metadata>
+    <property name="mimetypes">text/fun</property>
+    <property name="globs">*.fun</property>
+  </metadata>
+  
+  <styles>
+    <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+    <style id="declaration" _name="Declaration Type" map-to="def:declaration"/>
+    <style id="type" _name="Data Type" map-to="def:type"/>
+    <style id="specblock" _name="Specification" map-to="def:specblock"/>
+    <style id="funblock" _name="Function" map-to="def:funblock"/>
+    <style id="valblock" _name="Val" map-to="def:valblock"/>
+    <style id="derivblock" _name="Derivation" map-to="def:derivblock"/>
+    <style id="proofblock" _name="Proof" map-to="def:proofblock"/>
+    <style id="proofJustify" _name="Proof Justify" map-to="def:justificationProof"/>
+    <style id="proofRelation" _name="Proof Relation" map-to="def:relationProof"/>
+    <style id="propblock" _name="Proposition"   map-to="def:propblock"/>
+    <style id="comment" _name="Comment" map-to="def:comment"/>
+  </styles>
+
+  <definitions>
+    <context id="fun">
+      <include>
+        <context id="keywords" style-ref="keyword">
+          <keyword>where</keyword>
+          <keyword>in</keyword>
+          <keyword>for</keyword>
+          <keyword>of</keyword>
+          <keyword>by</keyword>
+          <keyword>basic</keyword>
+          <keyword>induction</keyword>
+          <keyword>with</keyword>
+          <keyword>case</keyword>
+          <keyword>cases on</keyword>
+          <keyword>-\></keyword>
+          <keyword>module</keyword>
+          <keyword>import</keyword>
+          <keyword>if</keyword>
+          <keyword>then</keyword>
+          <keyword>else</keyword>
+          <keyword>verified from</keyword>
+
+        </context>
+
+        <context id="declarations" style-ref="declaration">
+          <keyword>spec</keyword>
+          <keyword>fun</keyword>
+          <keyword>value</keyword>
+          <keyword>proof</keyword>
+          <keyword>derivation</keyword>
+        </context>
+
+        <context id="types" style-ref="type">
+          <keyword>Nat</keyword>
+          <keyword>List</keyword>
+          <keyword>Bool</keyword>
+        </context>
+
+        <context id="specblocks" style-ref="specblock">
+          <start>let spec</start>
+          <end>end</end>
+          <include>
+            <context ref="types" />
+            <context ref="declarations" />
+            <context ref="keywords" />
+          </include>
+        </context>
+
+        <context id="funblocks" style-ref="funblock">
+          <start>let fun</start>
+          <end>end</end>
+          <include>
+            <context ref="types" />
+            <context ref="declarations" />
+            <context ref="keywords" />
+          </include>
+        </context>
+        
+        <context id="valblocks" style-ref="valblock">
+          <start>let val</start>
+          <end>end</end>
+          <include>
+            <context ref="types" />
+            <context ref="declarations" />
+            <context ref="keywords" />
+          </include>
+        </context>
+
+        <context id="derivblocks" style-ref="derivblock">
+          <start>let derivation</start>
+          <end>end</end>
+          <include>
+            <context ref="types" />
+            <context ref="declarations" />
+            <context ref="keywords" />
+            <context id="justificationDeriv" style-ref="proofJustify">
+              <start>\{</start>
+              <end>\}</end>
+            </context>
+          </include>
+        </context>
+        
+        
+        <context id="proofblocks" style-ref="proofblock">
+          <start>let thm</start>
+          <end>end proof</end>
+          <include>
+            <context ref="types" />
+            <context ref="keywords" />            
+            <context id="justification" style-ref="proofJustify">
+              <start>\{</start>
+              <end>\}</end>
+            </context>
+            <context id="hypothesis" style-ref="proofJustify">
+              <match>\[[^(\])]*:[^(\[)]*\]</match>
+            </context>
+            <context id="relation" style-ref="proofRelation">
+              <match> = | ≡ </match>
+            </context>
+          </include>
+        </context>
+        
+        <context id="propblocks" style-ref="propblock">
+          <start>let prop</start>
+          <end>end</end>
+          <include>
+            <context ref="types" />
+            <context ref="declarations" />
+            <context ref="keywords" />
+          </include>
+        </context>
+        
+        
+        <context id="block-comment" style-ref="comment" class="comment" class-disabled="no-spell-check">
+            <start>\{-</start>
+            <end>-\}</end>
+        </context>
+    
+        <context id="line-comment" style-ref="comment" end-at-line-end="true" class="comment" class-disabled="no-spell-check">
+            <start>--</start>
+        </context>
+        
+
+      </include>
+    </context>
+  </definitions>
+
+</language>

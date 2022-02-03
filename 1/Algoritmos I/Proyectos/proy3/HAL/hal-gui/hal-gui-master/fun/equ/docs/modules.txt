@@ -1,0 +1,29 @@
+* Las fórmulas deberían ser una teoría en sí mismas
+  (que corresponde a los booleanos).
+* Las expresiones de cada teoría son parametrizadas por "variables".
+* Hay una typeclass de expresiones y una typeclass de teorías.
+* Las expresiones tienen su tipo de EQU.
+
+Módulos:
+- Theory.hs: definición de qué es una teoría.
+- Expr.hs: definición de expresiones de teorías.
+- Type.hs: definición de qué es un tipo de una expresión.
+- Axiom.hs: (ó Rule.hs) definición de qué es una regla; p.ej. 
+               se puede distinguir entre si es una equivalencia o
+               monotonía u otra cosa.
+- Subst.hs: definición de qué es una sustitución.
+- Operator.hs: definición de operadores.
+- Expr/Abs.hs: representación abstracta de expresiones.
+- Expr/Con.hs: representación concreta de expresiones.
+                       En esta representación, deberíamos poder
+                       respetar la forma en que el usuario ingresó
+                       un término.
+- TypeChecker.hs: Chequeo de tipos.
+- Typing/: Derivaciones de árboles de tipado.
+- Theories/ : Teorías específicas, probablemente con la sig. estructura
+   - Theories/Num.hs
+   - Theories/Num/Expr.hs
+
+
+
+

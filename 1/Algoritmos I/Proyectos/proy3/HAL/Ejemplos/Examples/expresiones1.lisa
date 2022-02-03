@@ -1,0 +1,12 @@
+varinput x : Int;
+varinput y : Int;
+varinput z : Int;
+varinput b : Bool;
+varinput w : Bool;
+
+evaluar x + y + 1;
+evaluar z * z + y * 45 - 15 * x;
+evaluar x < z && not w;
+evaluar y - 2 = (x * 3 + 1) % 5;
+evaluar y / 2  * x;
+evaluar 10 < x || b;

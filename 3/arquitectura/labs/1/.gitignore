@@ -1,0 +1,7 @@
+db/
+Consigna/
+output_files
+*.zip
+*.bak
+*.qtf
+*.rpt

@@ -1,0 +1,225 @@
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700')
+
+// typografy
+$family-sans-serif: 'Lumos'
+$family-monospace: monospace 
+$render-mode: optimizeLegibility
+
+$gold: hsla(45, 90%, 38%, 1)
+$white: hsl(0, 0%, 100%)
+$black: hsl(0, 0%, 0%)
+$sand: hsla(43, 61%, 69%, 1)
+$bluegreen: hsla(184, 72%, 17%, 1)
+
+$card-header-color: $black
+$body-background-color: $black
+$progress-value-background-color: $gold
+// Import only what you need from Bulma
+
+@import "../../node_modules/bulma/bulma.sass"
+@import '../../node_modules/bulma/sass/utilities/_all.sass'
+@import '../../node_modules/bulma/sass/grid/_all.sass'
+@import '../../node_modules/bulma/sass/base/_all.sass'
+@import '../../node_modules/bulma/sass/elements/button.sass'
+@import '../../node_modules/bulma/sass/elements/container.sass'
+@import '../../node_modules/bulma/sass/form/_all.sass'
+@import '../../node_modules/bulma/sass/elements/title.sass'
+@import '../../node_modules/bulma/sass/layout/hero.sass'
+@import '../../node_modules/bulma/sass/layout/section.sass'
+@import '../../node_modules/bulma/sass/components/card.sass'
+@import '../../node_modules/bulma/sass/elements/box.sass'
+@import '../../node_modules/bulma/sass/form/input-textarea'
+@import '../../node_modules/bulma/sass/elements/progress.sass'
+
+//HEADER
+.header-img 
+    background-image: url('../images/de-vs-po.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 600px
+
+.header-title
+    @extend .title
+    text-shadow : 1px 1px 2px black
+    color: $gold
+
+.header-subtitle
+    @extend .subtitle
+    text-shadow : 1px 1px 2px black
+    color: $sand
+
+
+//LOGIN
+.login-label
+    @extend .label
+    color: $gold
+
+.login-input
+    @extend .input
+    color: $black
+
+.login-button
+    @extend .button
+    margin-top: 1%
+    background-color: $gold
+    color: $black
+    border-color: $gold
+    
+// REGISTER
+.reg-bg
+    background: $bluegreen
+    height: 965px
+    border-radius: 100px
+.reg-title
+    @extend .title
+    color: $gold
+
+
+//HOME   
+.home-title
+    @extend .title
+    color: $gold
+
+.section 
+    background-color: $bluegreen
+    height: 70vh
+    padding: 15px 
+
+.home-button
+    @extend .button
+    background-color: $black
+    color: $gold
+    border-color: $gold
+    font-size: $size-large
+    border-radius: 5px
+    
+.hero-title
+    @extend .title
+    color: $gold
+
+
+//Room
+.room-bg
+    background-color: $bluegreen
+    height: auto
+    border-radius: 10px
+    padding-left: 5px
+    padding-right: 5px
+
+.room-title
+    @extend .title
+    color: $black
+
+.room-label
+    @extend .label
+    color: $gold
+    font-size: $size-large
+
+.room-input
+    @extend .input
+    font-size: $size-large
+
+.room-button
+    @extend .button
+    background-color: $gold
+    color: $black 
+    border-color: $gold
+    font-size: $size-medium
+    border-radius: 5px
+
+.i-playerlist
+    color: $black
+    font-size: $size-medium
+
+.room-card
+    @extend .card
+    color: $black
+    background-color: $sand
+    border-radius: 10px
+    height: 250px
+
+.room-row
+    border-radius: 10px
+    border-color: $gold
+    border-style: solid
+    color: $black
+    font-size: large
+
+// GAME
+.game-title
+    @extend .title
+    color: $gold
+
+.panel-bg
+    background-color: $sand
+    width: auto 
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+    border-radius: 15px
+    color: $black
+    font-size: large
+
+.player-list
+    height: 150px
+    overflow-y: scroll    
+
+.panel-title
+    @extend .title
+    color: $black
+
+.panel-button
+    @extend .button
+    background-color: $gold
+    color: $black
+    border-color: $bluegreen
+    border-width: 3px
+
+// DASHBOARD
+.dashboard-bg
+    background-color: $sand
+    height: 300px
+    width: auto 
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+    border-radius: 15px
+  
+.list-bg
+    background-color: $white
+  
+// UPDATE_NICKNAME
+.container-dialog
+    background-color: $black
+.container-border
+    border-color: $gold
+
+.chat
+    @extend .box
+    height: 150px
+    overflow-y: scroll
+    overflow-wrap: break-word
+    color: $black
+    background-color: $sand
+    border-radius: 5px
+    border: 1px solid $black
+    
+.chat-input
+    @extend .input
+    border-radius: 10px
+    border-color: $gold
+
+.chaos-card
+    @extend .card
+    height: auto
+    background-color: $black
+    
+.chaos-text
+    @extend .title
+    color: $gold
+    font-size: 25px
+        

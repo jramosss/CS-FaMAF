@@ -1,0 +1,29 @@
+
+
+begin proof reflexEquiv
+                p
+                ≡ { Neutro de la equivalencia a derecha }
+                p ≡ True
+                ≡ { Neutro de la equivalencia a derecha }
+                p
+end proof
+
+begin proof absorventeOr
+                p ∨ True
+                ≡ { reflexEquiv }
+                p ∨ (q ≡ q)
+                ≡ { Distributividad de ≡ con ∨ }
+                (p ∨ q) ≡ (p ∨ q)
+                ≡ { reflexEquiv }
+                True
+end proof
+
+begin proof instanciacion
+            〈∀ x : True : f@x〉
+            ≡ { absorventeOr }
+            〈∀ x : True ∨ (x = y) : f@x〉
+            ≡ { Partición de Rango Para Todo }
+            〈∀ x : True : f@x〉 ∧ 〈∀ x : x = y : f@x〉
+            ≡ { Rango Unitario Para Todo }
+            〈∀ x : True : f@x〉 ∧ f@y
+end proof

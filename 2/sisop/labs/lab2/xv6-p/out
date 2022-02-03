@@ -1,0 +1,1218 @@
+pr.pl:}else{
+pipe.c:  } else {
+pipe.c:  } else
+Notes:sector-aligned. so you can't use ld -N. and the sections may also need
+Notes:to be non-zero length, only really matters for tiny "kernels".
+Notes:    also protects next_pid
+Notes:    also maybe freeness?
+Notes:sh: chain of pipes won't work, also ugly that parent closes fdarray entries too
+entry.S:# the kernel C code, so it can refer to kernel symbols such as main().
+ide.c:  } else {
+ide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+runoff.list:# system calls
+fs.c:  brelse(bp);
+fs.c:  brelse(bp);
+fs.c:        brelse(bp);
+fs.c:    brelse(bp);
+fs.c:  brelse(bp);
+fs.c:// ilock() is separate from iget() so that system calls can
+fs.c:// The separation also helps avoid deadlock and races during
+fs.c:      brelse(bp);
+fs.c:    brelse(bp);
+fs.c:  brelse(bp);
+fs.c:    brelse(bp);
+fs.c:// All calls to iput() must be inside a transaction in
+fs.c:    brelse(bp);
+fs.c:    brelse(bp);
+fs.c:    brelse(bp);
+fs.c:    brelse(bp);
+fs.c:  else {
+fs.c:// Must be called inside a transaction since it calls iput().
+fs.c:  else
+mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+mkfs.c:    perror("lseek");
+mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+mkfs.c:    perror("lseek");
+mkfs.c:    } else {
+vm.c:  } else {
+vm.c:// current process's page table during system calls and interrupts;
+vm.c:    else
+vm.c:    else if((*pte & PTE_P) != 0){
+syscall.c:static int (*syscalls[])(void) = {
+syscall.c:  if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+syscall.c:    curproc->tf->eax = syscalls[num]();
+syscall.c:  } else {
+console.c:  else
+console.c:  else if(c == BACKSPACE){
+console.c:  } else
+console.c:  } else
+wc.c:      else if(!inword){
+user.h:// system calls
+string.c:  } else
+string.c:  } else
+cuth:			}else{
+bootmain.c:// Part of the boot block, along with bootasm.S, which calls bootmain().
+trapasm.S:  # Return falls through to trapret...
+mp.c:  } else {
+Makefile:# Using native tools (e.g., on X86 Linux)
+Makefile:	else echo "***" 1>&2; \
+Makefile:	echo "*** Error: Couldn't find an i386-*-elf version of GCC/binutils." 1>&2; \
+Makefile:	else \
+Makefile:# details:
+Makefile:	_ls\
+Makefile:	ls -l xv6.pdf
+Makefile:	else echo "-s -p $(GDBPORT)"; fi)
+Makefile:	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+umalloc.c:  } else
+umalloc.c:  } else
+umalloc.c:      else {
+forktest.c:// Test that fork fails gracefully.
+file.c:  else if(ff.type == FD_INODE){
+bio.c:// in memory reduces the number of disk reads and also provides
+bio.c:// * When done with the buffer, call brelse.
+bio.c:// * Do not use the buffer after calling brelse.
+bio.c:brelse(struct buf *b)
+bio.c:    panic("brelse");
+defs.h:void            brelse(struct buf*);
+memide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+memide.c:  } else
+log.c:// Simple logging that allows concurrent FS system calls.
+log.c:// calls. The logging system only commits when there are
+log.c:// no FS system calls active. Thus there is never
+log.c:// the count of in-progress FS system calls and returns.
+log.c:  int outstanding; // how many FS sys calls are executing.
+log.c:    brelse(lbuf);
+log.c:    brelse(dbuf);
+log.c:  brelse(buf);
+log.c:  brelse(buf);
+log.c:    } else if(log.lh.n + (log.outstanding+1)*MAXOPBLOCKS > LOGSIZE){
+log.c:    } else {
+log.c:  } else {
+log.c:    brelse(from);
+log.c:    brelse(to);
+log.c://   brelse(bp)
+gdbutil:  else
+gdbutil:  else
+gdbutil:  else
+gdbutil:  else
+gdbutil:    else
+gdbutil:  else
+gdbutil:  else
+gdbutil:    else
+gdbutil:  else
+gdbutil:      else
+gdbutil:    else
+gdbutil:      else
+gdbutil:  else
+gdbutil:  else
+gdbutil:    else
+kbd.c:  } else if(data & 0x80){
+kbd.c:  } else if(shift & E0ESC){
+kbd.c:    else if('A' <= c && c <= 'Z')
+kalloc.c:// 1. main() calls kinit1() while still using entrypgdir to place just
+kalloc.c:// 2. main() calls kinit2() with the rest of the physical pages
+README:2000)). See also https://pdos.csail.mit.edu/6.828/, which
+README:We are also grateful for the bug reports and patches contributed by Silas
+README:Nelson Elhage, Saar Ettinger, Alice Ferrazzi, Nathaniel Filardo, Peter
+runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+) +([^ ]+)/) {
+runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+)/) {
+runoff:		elsif(/^([0-9]+) (enum|struct|union) +([A-Za-z0-9_]+) +{/){ 
+runoff:#	else
+runoff:else
+out.txt:pr.pl:}else{
+out.txt:pipe.c:  } else {
+out.txt:pipe.c:  } else
+out.txt:Notes:sector-aligned. so you can't use ld -N. and the sections may also need
+out.txt:Notes:to be non-zero length, only really matters for tiny "kernels".
+out.txt:Notes:    also protects next_pid
+out.txt:Notes:    also maybe freeness?
+out.txt:Notes:sh: chain of pipes won't work, also ugly that parent closes fdarray entries too
+out.txt:entry.S:# the kernel C code, so it can refer to kernel symbols such as main().
+out.txt:ide.c:  } else {
+out.txt:ide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+out.txt:runoff.list:# system calls
+out.txt:fs.c:  brelse(bp);
+out.txt:fs.c:  brelse(bp);
+out.txt:fs.c:        brelse(bp);
+out.txt:fs.c:    brelse(bp);
+out.txt:fs.c:  brelse(bp);
+out.txt:fs.c:// ilock() is separate from iget() so that system calls can
+out.txt:fs.c:// The separation also helps avoid deadlock and races during
+out.txt:fs.c:      brelse(bp);
+out.txt:fs.c:    brelse(bp);
+out.txt:fs.c:  brelse(bp);
+out.txt:fs.c:    brelse(bp);
+out.txt:fs.c:// All calls to iput() must be inside a transaction in
+out.txt:fs.c:    brelse(bp);
+out.txt:fs.c:    brelse(bp);
+out.txt:fs.c:    brelse(bp);
+out.txt:fs.c:    brelse(bp);
+out.txt:fs.c:  else {
+out.txt:fs.c:// Must be called inside a transaction since it calls iput().
+out.txt:fs.c:  else
+out.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+out.txt:mkfs.c:    perror("lseek");
+out.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+out.txt:mkfs.c:    perror("lseek");
+out.txt:mkfs.c:    } else {
+out.txt:vm.c:  } else {
+out.txt:vm.c:// current process's page table during system calls and interrupts;
+out.txt:vm.c:    else
+out.txt:vm.c:    else if((*pte & PTE_P) != 0){
+out.txt:syscall.c:static int (*syscalls[])(void) = {
+out.txt:syscall.c:  if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+out.txt:syscall.c:    curproc->tf->eax = syscalls[num]();
+out.txt:syscall.c:  } else {
+out.txt:console.c:  else
+out.txt:console.c:  else if(c == BACKSPACE){
+out.txt:console.c:  } else
+out.txt:console.c:  } else
+out.txt:wc.c:      else if(!inword){
+out.txt:user.h:// system calls
+out.txt:string.c:  } else
+out.txt:string.c:  } else
+out.txt:cuth:			}else{
+out.txt:bootmain.c:// Part of the boot block, along with bootasm.S, which calls bootmain().
+out.txt:trapasm.S:  # Return falls through to trapret...
+out.txt:mp.c:  } else {
+out.txt:Makefile:# Using native tools (e.g., on X86 Linux)
+out.txt:Makefile:	else echo "***" 1>&2; \
+out.txt:Makefile:	echo "*** Error: Couldn't find an i386-*-elf version of GCC/binutils." 1>&2; \
+out.txt:Makefile:	else \
+out.txt:Makefile:# details:
+out.txt:Makefile:	_ls\
+out.txt:Makefile:	ls -l xv6.pdf
+out.txt:Makefile:	else echo "-s -p $(GDBPORT)"; fi)
+out.txt:Makefile:	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+out.txt:umalloc.c:  } else
+out.txt:umalloc.c:  } else
+out.txt:umalloc.c:      else {
+out.txt:forktest.c:// Test that fork fails gracefully.
+out.txt:file.c:  else if(ff.type == FD_INODE){
+out.txt:bio.c:// in memory reduces the number of disk reads and also provides
+out.txt:bio.c:// * When done with the buffer, call brelse.
+out.txt:bio.c:// * Do not use the buffer after calling brelse.
+out.txt:bio.c:brelse(struct buf *b)
+out.txt:bio.c:    panic("brelse");
+out.txt:defs.h:void            brelse(struct buf*);
+out.txt:memide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+out.txt:memide.c:  } else
+out.txt:log.c:// Simple logging that allows concurrent FS system calls.
+out.txt:log.c:// calls. The logging system only commits when there are
+out.txt:log.c:// no FS system calls active. Thus there is never
+out.txt:log.c:// the count of in-progress FS system calls and returns.
+out.txt:log.c:  int outstanding; // how many FS sys calls are executing.
+out.txt:log.c:    brelse(lbuf);
+out.txt:log.c:    brelse(dbuf);
+out.txt:log.c:  brelse(buf);
+out.txt:log.c:  brelse(buf);
+out.txt:log.c:    } else if(log.lh.n + (log.outstanding+1)*MAXOPBLOCKS > LOGSIZE){
+out.txt:log.c:    } else {
+out.txt:log.c:  } else {
+out.txt:log.c:    brelse(from);
+out.txt:log.c:    brelse(to);
+out.txt:log.c://   brelse(bp)
+out.txt:gdbutil:  else
+out.txt:gdbutil:  else
+out.txt:gdbutil:  else
+out.txt:gdbutil:  else
+out.txt:gdbutil:    else
+out.txt:gdbutil:  else
+out.txt:gdbutil:  else
+out.txt:gdbutil:    else
+out.txt:gdbutil:  else
+out.txt:gdbutil:      else
+out.txt:gdbutil:    else
+out.txt:gdbutil:      else
+out.txt:gdbutil:  else
+out.txt:gdbutil:  else
+out.txt:gdbutil:    else
+out.txt:kbd.c:  } else if(data & 0x80){
+out.txt:kbd.c:  } else if(shift & E0ESC){
+out.txt:kbd.c:    else if('A' <= c && c <= 'Z')
+out.txt:kalloc.c:// 1. main() calls kinit1() while still using entrypgdir to place just
+out.txt:kalloc.c:// 2. main() calls kinit2() with the rest of the physical pages
+out.txt:README:2000)). See also https://pdos.csail.mit.edu/6.828/, which
+out.txt:README:We are also grateful for the bug reports and patches contributed by Silas
+out.txt:README:Nelson Elhage, Saar Ettinger, Alice Ferrazzi, Nathaniel Filardo, Peter
+out.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+) +([^ ]+)/) {
+out.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+)/) {
+out.txt:runoff:		elsif(/^([0-9]+) (enum|struct|union) +([A-Za-z0-9_]+) +{/){ 
+out.txt:runoff:#	else
+out.txt:runoff:else
+out.txt:outt.txt:pr.pl:}else{
+out.txt:outt.txt:pipe.c:  } else {
+out.txt:outt.txt:pipe.c:  } else
+out.txt:outt.txt:Notes:sector-aligned. so you can't use ld -N. and the sections may also need
+out.txt:outt.txt:Notes:to be non-zero length, only really matters for tiny "kernels".
+out.txt:outt.txt:Notes:    also protects next_pid
+out.txt:outt.txt:Notes:    also maybe freeness?
+out.txt:outt.txt:Notes:sh: chain of pipes won't work, also ugly that parent closes fdarray entries too
+out.txt:outt.txt:entry.S:# the kernel C code, so it can refer to kernel symbols such as main().
+out.txt:outt.txt:ide.c:  } else {
+out.txt:outt.txt:ide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+out.txt:outt.txt:runoff.list:# system calls
+out.txt:outt.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:fs.c:        brelse(bp);
+out.txt:outt.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:fs.c:// ilock() is separate from iget() so that system calls can
+out.txt:outt.txt:fs.c:// The separation also helps avoid deadlock and races during
+out.txt:outt.txt:fs.c:      brelse(bp);
+out.txt:outt.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:fs.c:// All calls to iput() must be inside a transaction in
+out.txt:outt.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:fs.c:  else {
+out.txt:outt.txt:fs.c:// Must be called inside a transaction since it calls iput().
+out.txt:outt.txt:fs.c:  else
+out.txt:outt.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+out.txt:outt.txt:mkfs.c:    perror("lseek");
+out.txt:outt.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+out.txt:outt.txt:mkfs.c:    perror("lseek");
+out.txt:outt.txt:mkfs.c:    } else {
+out.txt:outt.txt:vm.c:  } else {
+out.txt:outt.txt:vm.c:// current process's page table during system calls and interrupts;
+out.txt:outt.txt:vm.c:    else
+out.txt:outt.txt:vm.c:    else if((*pte & PTE_P) != 0){
+out.txt:outt.txt:syscall.c:static int (*syscalls[])(void) = {
+out.txt:outt.txt:syscall.c:  if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+out.txt:outt.txt:syscall.c:    curproc->tf->eax = syscalls[num]();
+out.txt:outt.txt:syscall.c:  } else {
+out.txt:outt.txt:console.c:  else
+out.txt:outt.txt:console.c:  else if(c == BACKSPACE){
+out.txt:outt.txt:console.c:  } else
+out.txt:outt.txt:console.c:  } else
+out.txt:outt.txt:wc.c:      else if(!inword){
+out.txt:outt.txt:user.h:// system calls
+out.txt:outt.txt:string.c:  } else
+out.txt:outt.txt:string.c:  } else
+out.txt:outt.txt:cuth:			}else{
+out.txt:outt.txt:bootmain.c:// Part of the boot block, along with bootasm.S, which calls bootmain().
+out.txt:outt.txt:trapasm.S:  # Return falls through to trapret...
+out.txt:outt.txt:mp.c:  } else {
+out.txt:outt.txt:Makefile:# Using native tools (e.g., on X86 Linux)
+out.txt:outt.txt:Makefile:	else echo "***" 1>&2; \
+out.txt:outt.txt:Makefile:	echo "*** Error: Couldn't find an i386-*-elf version of GCC/binutils." 1>&2; \
+out.txt:outt.txt:Makefile:	else \
+out.txt:outt.txt:Makefile:# details:
+out.txt:outt.txt:Makefile:	_ls\
+out.txt:outt.txt:Makefile:	ls -l xv6.pdf
+out.txt:outt.txt:Makefile:	else echo "-s -p $(GDBPORT)"; fi)
+out.txt:outt.txt:Makefile:	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+out.txt:outt.txt:umalloc.c:  } else
+out.txt:outt.txt:umalloc.c:  } else
+out.txt:outt.txt:umalloc.c:      else {
+out.txt:outt.txt:forktest.c:// Test that fork fails gracefully.
+out.txt:outt.txt:file.c:  else if(ff.type == FD_INODE){
+out.txt:outt.txt:bio.c:// in memory reduces the number of disk reads and also provides
+out.txt:outt.txt:bio.c:// * When done with the buffer, call brelse.
+out.txt:outt.txt:bio.c:// * Do not use the buffer after calling brelse.
+out.txt:outt.txt:bio.c:brelse(struct buf *b)
+out.txt:outt.txt:bio.c:    panic("brelse");
+out.txt:outt.txt:defs.h:void            brelse(struct buf*);
+out.txt:outt.txt:memide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+out.txt:outt.txt:memide.c:  } else
+out.txt:outt.txt:log.c:// Simple logging that allows concurrent FS system calls.
+out.txt:outt.txt:log.c:// calls. The logging system only commits when there are
+out.txt:outt.txt:log.c:// no FS system calls active. Thus there is never
+out.txt:outt.txt:log.c:// the count of in-progress FS system calls and returns.
+out.txt:outt.txt:log.c:  int outstanding; // how many FS sys calls are executing.
+out.txt:outt.txt:log.c:    brelse(lbuf);
+out.txt:outt.txt:log.c:    brelse(dbuf);
+out.txt:outt.txt:log.c:  brelse(buf);
+out.txt:outt.txt:log.c:  brelse(buf);
+out.txt:outt.txt:log.c:    } else if(log.lh.n + (log.outstanding+1)*MAXOPBLOCKS > LOGSIZE){
+out.txt:outt.txt:log.c:    } else {
+out.txt:outt.txt:log.c:  } else {
+out.txt:outt.txt:log.c:    brelse(from);
+out.txt:outt.txt:log.c:    brelse(to);
+out.txt:outt.txt:log.c://   brelse(bp)
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:    else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:    else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:      else
+out.txt:outt.txt:gdbutil:    else
+out.txt:outt.txt:gdbutil:      else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:  else
+out.txt:outt.txt:gdbutil:    else
+out.txt:outt.txt:kbd.c:  } else if(data & 0x80){
+out.txt:outt.txt:kbd.c:  } else if(shift & E0ESC){
+out.txt:outt.txt:kbd.c:    else if('A' <= c && c <= 'Z')
+out.txt:outt.txt:kalloc.c:// 1. main() calls kinit1() while still using entrypgdir to place just
+out.txt:outt.txt:kalloc.c:// 2. main() calls kinit2() with the rest of the physical pages
+out.txt:outt.txt:README:2000)). See also https://pdos.csail.mit.edu/6.828/, which
+out.txt:outt.txt:README:We are also grateful for the bug reports and patches contributed by Silas
+out.txt:outt.txt:README:Nelson Elhage, Saar Ettinger, Alice Ferrazzi, Nathaniel Filardo, Peter
+out.txt:outt.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+) +([^ ]+)/) {
+out.txt:outt.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+)/) {
+out.txt:outt.txt:runoff:		elsif(/^([0-9]+) (enum|struct|union) +([A-Za-z0-9_]+) +{/){ 
+out.txt:outt.txt:runoff:#	else
+out.txt:outt.txt:runoff:else
+out.txt:outt.txt:out.txt:pr.pl:}else{
+out.txt:outt.txt:out.txt:pipe.c:  } else {
+out.txt:outt.txt:out.txt:pipe.c:  } else
+out.txt:outt.txt:out.txt:Notes:sector-aligned. so you can't use ld -N. and the sections may also need
+out.txt:outt.txt:out.txt:Notes:to be non-zero length, only really matters for tiny "kernels".
+out.txt:outt.txt:out.txt:Notes:    also protects next_pid
+out.txt:outt.txt:out.txt:Notes:    also maybe freeness?
+out.txt:outt.txt:out.txt:Notes:sh: chain of pipes won't work, also ugly that parent closes fdarray entries too
+out.txt:outt.txt:out.txt:entry.S:# the kernel C code, so it can refer to kernel symbols such as main().
+out.txt:outt.txt:out.txt:ide.c:  } else {
+out.txt:outt.txt:out.txt:ide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+out.txt:outt.txt:out.txt:runoff.list:# system calls
+out.txt:outt.txt:out.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:        brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:// ilock() is separate from iget() so that system calls can
+out.txt:outt.txt:out.txt:fs.c:// The separation also helps avoid deadlock and races during
+out.txt:outt.txt:out.txt:fs.c:      brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:  brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:// All calls to iput() must be inside a transaction in
+out.txt:outt.txt:out.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:    brelse(bp);
+out.txt:outt.txt:out.txt:fs.c:  else {
+out.txt:outt.txt:out.txt:fs.c:// Must be called inside a transaction since it calls iput().
+out.txt:outt.txt:out.txt:fs.c:  else
+out.txt:outt.txt:out.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+out.txt:outt.txt:out.txt:mkfs.c:    perror("lseek");
+out.txt:outt.txt:out.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+out.txt:outt.txt:out.txt:mkfs.c:    perror("lseek");
+out.txt:outt.txt:out.txt:mkfs.c:    } else {
+out.txt:outt.txt:out.txt:vm.c:  } else {
+out.txt:outt.txt:out.txt:vm.c:// current process's page table during system calls and interrupts;
+out.txt:outt.txt:out.txt:vm.c:    else
+out.txt:outt.txt:out.txt:vm.c:    else if((*pte & PTE_P) != 0){
+out.txt:outt.txt:out.txt:syscall.c:static int (*syscalls[])(void) = {
+out.txt:outt.txt:out.txt:syscall.c:  if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+out.txt:outt.txt:out.txt:syscall.c:    curproc->tf->eax = syscalls[num]();
+out.txt:outt.txt:out.txt:syscall.c:  } else {
+out.txt:outt.txt:out.txt:console.c:  else
+out.txt:outt.txt:out.txt:console.c:  else if(c == BACKSPACE){
+out.txt:outt.txt:out.txt:console.c:  } else
+out.txt:outt.txt:out.txt:console.c:  } else
+out.txt:outt.txt:out.txt:wc.c:      else if(!inword){
+out.txt:outt.txt:out.txt:user.h:// system calls
+out.txt:outt.txt:out.txt:string.c:  } else
+out.txt:outt.txt:out.txt:string.c:  } else
+out.txt:outt.txt:out.txt:cuth:			}else{
+out.txt:outt.txt:out.txt:bootmain.c:// Part of the boot block, along with bootasm.S, which calls bootmain().
+out.txt:outt.txt:out.txt:trapasm.S:  # Return falls through to trapret...
+out.txt:outt.txt:out.txt:mp.c:  } else {
+out.txt:outt.txt:out.txt:Makefile:# Using native tools (e.g., on X86 Linux)
+out.txt:outt.txt:out.txt:Makefile:	else echo "***" 1>&2; \
+out.txt:outt.txt:out.txt:Makefile:	echo "*** Error: Couldn't find an i386-*-elf version of GCC/binutils." 1>&2; \
+out.txt:outt.txt:out.txt:Makefile:	else \
+out.txt:outt.txt:out.txt:Makefile:# details:
+out.txt:outt.txt:out.txt:Makefile:	_ls\
+out.txt:outt.txt:out.txt:Makefile:	ls -l xv6.pdf
+out.txt:outt.txt:out.txt:Makefile:	else echo "-s -p $(GDBPORT)"; fi)
+out.txt:outt.txt:out.txt:Makefile:	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+out.txt:outt.txt:out.txt:umalloc.c:  } else
+out.txt:outt.txt:out.txt:umalloc.c:  } else
+out.txt:outt.txt:out.txt:umalloc.c:      else {
+out.txt:outt.txt:out.txt:forktest.c:// Test that fork fails gracefully.
+out.txt:outt.txt:out.txt:file.c:  else if(ff.type == FD_INODE){
+out.txt:outt.txt:out.txt:bio.c:// in memory reduces the number of disk reads and also provides
+out.txt:outt.txt:out.txt:bio.c:// * When done with the buffer, call brelse.
+out.txt:outt.txt:out.txt:bio.c:// * Do not use the buffer after calling brelse.
+out.txt:outt.txt:out.txt:bio.c:brelse(struct buf *b)
+out.txt:outt.txt:out.txt:bio.c:    panic("brelse");
+out.txt:outt.txt:out.txt:defs.h:void            brelse(struct buf*);
+out.txt:outt.txt:out.txt:memide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+out.txt:outt.txt:out.txt:memide.c:  } else
+out.txt:outt.txt:out.txt:log.c:// Simple logging that allows concurrent FS system calls.
+out.txt:outt.txt:out.txt:log.c:// calls. The logging system only commits when there are
+out.txt:outt.txt:out.txt:log.c:// no FS system calls active. Thus there is never
+out.txt:outt.txt:out.txt:log.c:// the count of in-progress FS system calls and returns.
+out.txt:outt.txt:out.txt:log.c:  int outstanding; // how many FS sys calls are executing.
+out.txt:outt.txt:out.txt:log.c:    brelse(lbuf);
+out.txt:outt.txt:out.txt:log.c:    brelse(dbuf);
+out.txt:outt.txt:out.txt:log.c:  brelse(buf);
+out.txt:outt.txt:out.txt:log.c:  brelse(buf);
+out.txt:outt.txt:out.txt:log.c:    } else if(log.lh.n + (log.outstanding+1)*MAXOPBLOCKS > LOGSIZE){
+out.txt:outt.txt:out.txt:log.c:    } else {
+out.txt:outt.txt:out.txt:log.c:  } else {
+out.txt:outt.txt:out.txt:log.c:    brelse(from);
+out.txt:outt.txt:out.txt:log.c:    brelse(to);
+out.txt:outt.txt:out.txt:log.c://   brelse(bp)
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:    else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:    else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:      else
+out.txt:outt.txt:out.txt:gdbutil:    else
+out.txt:outt.txt:out.txt:gdbutil:      else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:  else
+out.txt:outt.txt:out.txt:gdbutil:    else
+out.txt:outt.txt:out.txt:kbd.c:  } else if(data & 0x80){
+out.txt:outt.txt:out.txt:kbd.c:  } else if(shift & E0ESC){
+out.txt:outt.txt:out.txt:kbd.c:    else if('A' <= c && c <= 'Z')
+out.txt:outt.txt:out.txt:kalloc.c:// 1. main() calls kinit1() while still using entrypgdir to place just
+out.txt:outt.txt:out.txt:kalloc.c:// 2. main() calls kinit2() with the rest of the physical pages
+out.txt:outt.txt:out.txt:README:2000)). See also https://pdos.csail.mit.edu/6.828/, which
+out.txt:outt.txt:out.txt:README:We are also grateful for the bug reports and patches contributed by Silas
+out.txt:outt.txt:out.txt:README:Nelson Elhage, Saar Ettinger, Alice Ferrazzi, Nathaniel Filardo, Peter
+out.txt:outt.txt:out.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+) +([^ ]+)/) {
+out.txt:outt.txt:out.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+)/) {
+out.txt:outt.txt:out.txt:runoff:		elsif(/^([0-9]+) (enum|struct|union) +([A-Za-z0-9_]+) +{/){ 
+out.txt:outt.txt:out.txt:runoff:#	else
+out.txt:outt.txt:out.txt:runoff:else
+out.txt:outt.txt:out.txt:.gdbinit.tmpl:  else
+out.txt:outt.txt:out.txt:usertests.c:  } else {
+out.txt:outt.txt:out.txt:usertests.c:  } else {
+out.txt:outt.txt:out.txt:usertests.c:  } else {
+out.txt:outt.txt:out.txt:usertests.c:    } else if(i != 512){
+out.txt:outt.txt:out.txt:usertests.c:  } else if(pid > 0){
+out.txt:outt.txt:out.txt:usertests.c:  } else {
+out.txt:outt.txt:out.txt:usertests.c:    } else {
+out.txt:outt.txt:out.txt:usertests.c:  } else {
+out.txt:outt.txt:out.txt:usertests.c:  else
+out.txt:outt.txt:out.txt:usertests.c:  } else {
+out.txt:outt.txt:out.txt:usertests.c:      } else if((i >= 1 && i < N/2) && fd >= 0){
+out.txt:outt.txt:out.txt:usertests.c:    } else if(pid == 0 && (i % 5) == 1){
+out.txt:outt.txt:out.txt:usertests.c:    } else {
+out.txt:outt.txt:out.txt:usertests.c:    else
+out.txt:outt.txt:out.txt:usertests.c:    } else {
+out.txt:outt.txt:out.txt:usertests.c:    else
+out.txt:outt.txt:out.txt:usertests.c:    } else if((x % 3) == 1){
+out.txt:outt.txt:out.txt:usertests.c:    } else {
+out.txt:outt.txt:out.txt:usertests.c:  else
+out.txt:outt.txt:out.txt:usertests.c:// test that fork fails gracefully
+out.txt:outt.txt:out.txt:usertests.c:// the forktest binary also does this, but it runs out of proc entries first.
+out.txt:outt.txt:out.txt:usertests.c:  } else if(pid < 0){
+out.txt:outt.txt:out.txt:usertests.c:  } else if(pid < 0){
+out.txt:outt.txt:out.txt:ioapic.c:// See also picirq.c.
+out.txt:outt.txt:out.txt:proc.c:  // writes to be visible, and the lock is also needed
+out.txt:outt.txt:out.txt:proc.c:  } else if(n < 0){
+out.txt:outt.txt:out.txt:proc.c:// until its parent calls wait() to find out it exited.
+out.txt:outt.txt:out.txt:proc.c:// Each CPU calls scheduler() after setting itself up.
+out.txt:outt.txt:out.txt:proc.c:    else
+out.txt:outt.txt:out.txt:printpcs:# Decode the symbols from a panic EIP list
+out.txt:outt.txt:out.txt:runoff1:	}else{
+out.txt:outt.txt:out.txt:runoff1:				}else{
+out.txt:outt.txt:out.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:out.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:out.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:out.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:out.txt:stressfs.c:// For this to work, you should also add a spin within iderw's
+out.txt:outt.txt:out.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+out.txt:outt.txt:out.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+out.txt:outt.txt:out.txt:dot-bochsrc:#display_library: sdl, options="fullscreen" # startup in fullscreen mode
+out.txt:outt.txt:out.txt:dot-bochsrc:# The ROM BIOS controls what the PC does when it first powers on.
+out.txt:outt.txt:out.txt:dot-bochsrc:# You can also use the environment variable $BXSHARE to specify the
+out.txt:outt.txt:out.txt:dot-bochsrc:# It can also be a convenient way to upload some arbitrary code/data
+out.txt:outt.txt:out.txt:dot-bochsrc:# These options enables up to 4 ata channels. For each channel
+out.txt:outt.txt:out.txt:dot-bochsrc:# legacy 'a' and 'c' are also supported
+out.txt:outt.txt:out.txt:dot-bochsrc:# Bochs now has four severity levels for event logging.
+out.txt:outt.txt:out.txt:dot-bochsrc:# You can also toggle the mouse usage at runtime (control key + middle
+out.txt:outt.txt:out.txt:dot-bochsrc:# fullscreen: ONLY IMPLEMENTED ON AMIGA
+out.txt:outt.txt:out.txt:dot-bochsrc:#   fullscreen: enabled=0
+out.txt:outt.txt:out.txt:dot-bochsrc:#   fullscreen: enabled=1
+out.txt:outt.txt:out.txt:dot-bochsrc:#fullscreen: enabled=0
+out.txt:outt.txt:out.txt:dot-bochsrc:# Also, the first byte must be an even number (bit 0 set means a multicast
+out.txt:outt.txt:out.txt:dot-bochsrc:# This option controls the presence of the i440FX PCI chipset. You can
+out.txt:outt.txt:out.txt:dot-bochsrc:# also specify the devices connected to PCI slots. Up to 5 slots are
+out.txt:outt.txt:out.txt:dot-bochsrc:# This option controls the presence of the USB root hub which is a part
+out.txt:outt.txt:out.txt:dot-bochsrc:# The rtc_init parameter controls whether initialize the RTC with values stored
+out.txt:outt.txt:out.txt:dot-bochsrc:# Enable GDB stub. See user documentation for details.
+out.txt:outt.txt:out.txt:sh.c:char symbols[] = "<|>&;()";
+out.txt:outt.txt:out.txt:sh.c:    while(s < es && !strchr(whitespace, *s) && !strchr(symbols, *s))
+out.txt:outt.txt:out.txt:spinlock.c:  // stores; __sync_synchronize() tells them both not to.
+out.txt:outt.txt:out.txt:spinlock.c:// it takes two popcli to undo two pushcli.  Also, if interrupts
+out.txt:outt.txt:out.txt:ls.c:ls(char *path)
+out.txt:outt.txt:out.txt:ls.c:    printf(2, "ls: cannot open %s\n", path);
+out.txt:outt.txt:out.txt:ls.c:    printf(2, "ls: cannot stat %s\n", path);
+out.txt:outt.txt:out.txt:ls.c:      printf(1, "ls: path too long\n");
+out.txt:outt.txt:out.txt:ls.c:        printf(1, "ls: cannot stat %s\n", buf);
+out.txt:outt.txt:out.txt:ls.c:    ls(".");
+out.txt:outt.txt:out.txt:ls.c:    ls(argv[i]);
+out.txt:outt.txt:out.txt:sysfile.c:// File-system system calls.
+out.txt:outt.txt:out.txt:sysfile.c:// user code, and calls into file.c and fs.c.
+out.txt:outt.txt:out.txt:sysfile.c:  } else {
+out.txt:outt.txt:out.txt:printf.c:  } else {
+out.txt:outt.txt:out.txt:printf.c:      } else {
+out.txt:outt.txt:out.txt:printf.c:    } else if(state == '%'){
+out.txt:outt.txt:out.txt:printf.c:      } else if(c == 'x' || c == 'p'){
+out.txt:outt.txt:out.txt:printf.c:      } else if(c == 's'){
+out.txt:outt.txt:out.txt:printf.c:      } else if(c == 'c'){
+out.txt:outt.txt:out.txt:printf.c:      } else if(c == '%'){
+out.txt:outt.txt:out.txt:printf.c:      } else {
+out.txt:outt.txt:out.txt:kernel.ld:	/* Conventionally, Unix linkers provide pseudo-symbols
+out.txt:outt.txt:out.txt:kernel.ld:	 * symbols, because the convention started before there was a
+out.txt:outt.txt:.gdbinit.tmpl:  else
+out.txt:outt.txt:usertests.c:  } else {
+out.txt:outt.txt:usertests.c:  } else {
+out.txt:outt.txt:usertests.c:  } else {
+out.txt:outt.txt:usertests.c:    } else if(i != 512){
+out.txt:outt.txt:usertests.c:  } else if(pid > 0){
+out.txt:outt.txt:usertests.c:  } else {
+out.txt:outt.txt:usertests.c:    } else {
+out.txt:outt.txt:usertests.c:  } else {
+out.txt:outt.txt:usertests.c:  else
+out.txt:outt.txt:usertests.c:  } else {
+out.txt:outt.txt:usertests.c:      } else if((i >= 1 && i < N/2) && fd >= 0){
+out.txt:outt.txt:usertests.c:    } else if(pid == 0 && (i % 5) == 1){
+out.txt:outt.txt:usertests.c:    } else {
+out.txt:outt.txt:usertests.c:    else
+out.txt:outt.txt:usertests.c:    } else {
+out.txt:outt.txt:usertests.c:    else
+out.txt:outt.txt:usertests.c:    } else if((x % 3) == 1){
+out.txt:outt.txt:usertests.c:    } else {
+out.txt:outt.txt:usertests.c:  else
+out.txt:outt.txt:usertests.c:// test that fork fails gracefully
+out.txt:outt.txt:usertests.c:// the forktest binary also does this, but it runs out of proc entries first.
+out.txt:outt.txt:usertests.c:  } else if(pid < 0){
+out.txt:outt.txt:usertests.c:  } else if(pid < 0){
+out.txt:outt.txt:ioapic.c:// See also picirq.c.
+out.txt:outt.txt:proc.c:  // writes to be visible, and the lock is also needed
+out.txt:outt.txt:proc.c:  } else if(n < 0){
+out.txt:outt.txt:proc.c:// until its parent calls wait() to find out it exited.
+out.txt:outt.txt:proc.c:// Each CPU calls scheduler() after setting itself up.
+out.txt:outt.txt:proc.c:    else
+out.txt:outt.txt:printpcs:# Decode the symbols from a panic EIP list
+out.txt:outt.txt:runoff1:	}else{
+out.txt:outt.txt:runoff1:				}else{
+out.txt:outt.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:sleep1.p:	:: else ->
+out.txt:outt.txt:stressfs.c:// For this to work, you should also add a spin within iderw's
+out.txt:outt.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+out.txt:outt.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+out.txt:outt.txt:dot-bochsrc:#display_library: sdl, options="fullscreen" # startup in fullscreen mode
+out.txt:outt.txt:dot-bochsrc:# The ROM BIOS controls what the PC does when it first powers on.
+out.txt:outt.txt:dot-bochsrc:# You can also use the environment variable $BXSHARE to specify the
+out.txt:outt.txt:dot-bochsrc:# It can also be a convenient way to upload some arbitrary code/data
+out.txt:outt.txt:dot-bochsrc:# These options enables up to 4 ata channels. For each channel
+out.txt:outt.txt:dot-bochsrc:# legacy 'a' and 'c' are also supported
+out.txt:outt.txt:dot-bochsrc:# Bochs now has four severity levels for event logging.
+out.txt:outt.txt:dot-bochsrc:# You can also toggle the mouse usage at runtime (control key + middle
+out.txt:outt.txt:dot-bochsrc:# fullscreen: ONLY IMPLEMENTED ON AMIGA
+out.txt:outt.txt:dot-bochsrc:#   fullscreen: enabled=0
+out.txt:outt.txt:dot-bochsrc:#   fullscreen: enabled=1
+out.txt:outt.txt:dot-bochsrc:#fullscreen: enabled=0
+out.txt:outt.txt:dot-bochsrc:# Also, the first byte must be an even number (bit 0 set means a multicast
+out.txt:outt.txt:dot-bochsrc:# This option controls the presence of the i440FX PCI chipset. You can
+out.txt:outt.txt:dot-bochsrc:# also specify the devices connected to PCI slots. Up to 5 slots are
+out.txt:outt.txt:dot-bochsrc:# This option controls the presence of the USB root hub which is a part
+out.txt:outt.txt:dot-bochsrc:# The rtc_init parameter controls whether initialize the RTC with values stored
+out.txt:outt.txt:dot-bochsrc:# Enable GDB stub. See user documentation for details.
+out.txt:outt.txt:sh.c:char symbols[] = "<|>&;()";
+out.txt:outt.txt:sh.c:    while(s < es && !strchr(whitespace, *s) && !strchr(symbols, *s))
+out.txt:outt.txt:spinlock.c:  // stores; __sync_synchronize() tells them both not to.
+out.txt:outt.txt:spinlock.c:// it takes two popcli to undo two pushcli.  Also, if interrupts
+out.txt:outt.txt:ls.c:ls(char *path)
+out.txt:outt.txt:ls.c:    printf(2, "ls: cannot open %s\n", path);
+out.txt:outt.txt:ls.c:    printf(2, "ls: cannot stat %s\n", path);
+out.txt:outt.txt:ls.c:      printf(1, "ls: path too long\n");
+out.txt:outt.txt:ls.c:        printf(1, "ls: cannot stat %s\n", buf);
+out.txt:outt.txt:ls.c:    ls(".");
+out.txt:outt.txt:ls.c:    ls(argv[i]);
+out.txt:outt.txt:sysfile.c:// File-system system calls.
+out.txt:outt.txt:sysfile.c:// user code, and calls into file.c and fs.c.
+out.txt:outt.txt:sysfile.c:  } else {
+out.txt:outt.txt:printf.c:  } else {
+out.txt:outt.txt:printf.c:      } else {
+out.txt:outt.txt:printf.c:    } else if(state == '%'){
+out.txt:outt.txt:printf.c:      } else if(c == 'x' || c == 'p'){
+out.txt:outt.txt:printf.c:      } else if(c == 's'){
+out.txt:outt.txt:printf.c:      } else if(c == 'c'){
+out.txt:outt.txt:printf.c:      } else if(c == '%'){
+out.txt:outt.txt:printf.c:      } else {
+out.txt:outt.txt:kernel.ld:	/* Conventionally, Unix linkers provide pseudo-symbols
+out.txt:outt.txt:kernel.ld:	 * symbols, because the convention started before there was a
+out.txt:.gdbinit.tmpl:  else
+out.txt:usertests.c:  } else {
+out.txt:usertests.c:  } else {
+out.txt:usertests.c:  } else {
+out.txt:usertests.c:    } else if(i != 512){
+out.txt:usertests.c:  } else if(pid > 0){
+out.txt:usertests.c:  } else {
+out.txt:usertests.c:    } else {
+out.txt:usertests.c:  } else {
+out.txt:usertests.c:  else
+out.txt:usertests.c:  } else {
+out.txt:usertests.c:      } else if((i >= 1 && i < N/2) && fd >= 0){
+out.txt:usertests.c:    } else if(pid == 0 && (i % 5) == 1){
+out.txt:usertests.c:    } else {
+out.txt:usertests.c:    else
+out.txt:usertests.c:    } else {
+out.txt:usertests.c:    else
+out.txt:usertests.c:    } else if((x % 3) == 1){
+out.txt:usertests.c:    } else {
+out.txt:usertests.c:  else
+out.txt:usertests.c:// test that fork fails gracefully
+out.txt:usertests.c:// the forktest binary also does this, but it runs out of proc entries first.
+out.txt:usertests.c:  } else if(pid < 0){
+out.txt:usertests.c:  } else if(pid < 0){
+out.txt:ioapic.c:// See also picirq.c.
+out.txt:proc.c:  // writes to be visible, and the lock is also needed
+out.txt:proc.c:  } else if(n < 0){
+out.txt:proc.c:// until its parent calls wait() to find out it exited.
+out.txt:proc.c:// Each CPU calls scheduler() after setting itself up.
+out.txt:proc.c:    else
+out.txt:printpcs:# Decode the symbols from a panic EIP list
+out.txt:runoff1:	}else{
+out.txt:runoff1:				}else{
+out.txt:sleep1.p:	:: else ->
+out.txt:sleep1.p:	:: else ->
+out.txt:sleep1.p:	:: else ->
+out.txt:sleep1.p:	:: else ->
+out.txt:stressfs.c:// For this to work, you should also add a spin within iderw's
+out.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+out.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+out.txt:dot-bochsrc:#display_library: sdl, options="fullscreen" # startup in fullscreen mode
+out.txt:dot-bochsrc:# The ROM BIOS controls what the PC does when it first powers on.
+out.txt:dot-bochsrc:# You can also use the environment variable $BXSHARE to specify the
+out.txt:dot-bochsrc:# It can also be a convenient way to upload some arbitrary code/data
+out.txt:dot-bochsrc:# These options enables up to 4 ata channels. For each channel
+out.txt:dot-bochsrc:# legacy 'a' and 'c' are also supported
+out.txt:dot-bochsrc:# Bochs now has four severity levels for event logging.
+out.txt:dot-bochsrc:# You can also toggle the mouse usage at runtime (control key + middle
+out.txt:dot-bochsrc:# fullscreen: ONLY IMPLEMENTED ON AMIGA
+out.txt:dot-bochsrc:#   fullscreen: enabled=0
+out.txt:dot-bochsrc:#   fullscreen: enabled=1
+out.txt:dot-bochsrc:#fullscreen: enabled=0
+out.txt:dot-bochsrc:# Also, the first byte must be an even number (bit 0 set means a multicast
+out.txt:dot-bochsrc:# This option controls the presence of the i440FX PCI chipset. You can
+out.txt:dot-bochsrc:# also specify the devices connected to PCI slots. Up to 5 slots are
+out.txt:dot-bochsrc:# This option controls the presence of the USB root hub which is a part
+out.txt:dot-bochsrc:# The rtc_init parameter controls whether initialize the RTC with values stored
+out.txt:dot-bochsrc:# Enable GDB stub. See user documentation for details.
+out.txt:sh.c:char symbols[] = "<|>&;()";
+out.txt:sh.c:    while(s < es && !strchr(whitespace, *s) && !strchr(symbols, *s))
+out.txt:spinlock.c:  // stores; __sync_synchronize() tells them both not to.
+out.txt:spinlock.c:// it takes two popcli to undo two pushcli.  Also, if interrupts
+out.txt:ls.c:ls(char *path)
+out.txt:ls.c:    printf(2, "ls: cannot open %s\n", path);
+out.txt:ls.c:    printf(2, "ls: cannot stat %s\n", path);
+out.txt:ls.c:      printf(1, "ls: path too long\n");
+out.txt:ls.c:        printf(1, "ls: cannot stat %s\n", buf);
+out.txt:ls.c:    ls(".");
+out.txt:ls.c:    ls(argv[i]);
+out.txt:sysfile.c:// File-system system calls.
+out.txt:sysfile.c:// user code, and calls into file.c and fs.c.
+out.txt:sysfile.c:  } else {
+out.txt:printf.c:  } else {
+out.txt:printf.c:      } else {
+out.txt:printf.c:    } else if(state == '%'){
+out.txt:printf.c:      } else if(c == 'x' || c == 'p'){
+out.txt:printf.c:      } else if(c == 's'){
+out.txt:printf.c:      } else if(c == 'c'){
+out.txt:printf.c:      } else if(c == '%'){
+out.txt:printf.c:      } else {
+out.txt:kernel.ld:	/* Conventionally, Unix linkers provide pseudo-symbols
+out.txt:kernel.ld:	 * symbols, because the convention started before there was a
+outt.txt:pr.pl:}else{
+outt.txt:pipe.c:  } else {
+outt.txt:pipe.c:  } else
+outt.txt:Notes:sector-aligned. so you can't use ld -N. and the sections may also need
+outt.txt:Notes:to be non-zero length, only really matters for tiny "kernels".
+outt.txt:Notes:    also protects next_pid
+outt.txt:Notes:    also maybe freeness?
+outt.txt:Notes:sh: chain of pipes won't work, also ugly that parent closes fdarray entries too
+outt.txt:entry.S:# the kernel C code, so it can refer to kernel symbols such as main().
+outt.txt:ide.c:  } else {
+outt.txt:ide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+outt.txt:runoff.list:# system calls
+outt.txt:fs.c:  brelse(bp);
+outt.txt:fs.c:  brelse(bp);
+outt.txt:fs.c:        brelse(bp);
+outt.txt:fs.c:    brelse(bp);
+outt.txt:fs.c:  brelse(bp);
+outt.txt:fs.c:// ilock() is separate from iget() so that system calls can
+outt.txt:fs.c:// The separation also helps avoid deadlock and races during
+outt.txt:fs.c:      brelse(bp);
+outt.txt:fs.c:    brelse(bp);
+outt.txt:fs.c:  brelse(bp);
+outt.txt:fs.c:    brelse(bp);
+outt.txt:fs.c:// All calls to iput() must be inside a transaction in
+outt.txt:fs.c:    brelse(bp);
+outt.txt:fs.c:    brelse(bp);
+outt.txt:fs.c:    brelse(bp);
+outt.txt:fs.c:    brelse(bp);
+outt.txt:fs.c:  else {
+outt.txt:fs.c:// Must be called inside a transaction since it calls iput().
+outt.txt:fs.c:  else
+outt.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+outt.txt:mkfs.c:    perror("lseek");
+outt.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+outt.txt:mkfs.c:    perror("lseek");
+outt.txt:mkfs.c:    } else {
+outt.txt:vm.c:  } else {
+outt.txt:vm.c:// current process's page table during system calls and interrupts;
+outt.txt:vm.c:    else
+outt.txt:vm.c:    else if((*pte & PTE_P) != 0){
+outt.txt:syscall.c:static int (*syscalls[])(void) = {
+outt.txt:syscall.c:  if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+outt.txt:syscall.c:    curproc->tf->eax = syscalls[num]();
+outt.txt:syscall.c:  } else {
+outt.txt:console.c:  else
+outt.txt:console.c:  else if(c == BACKSPACE){
+outt.txt:console.c:  } else
+outt.txt:console.c:  } else
+outt.txt:wc.c:      else if(!inword){
+outt.txt:user.h:// system calls
+outt.txt:string.c:  } else
+outt.txt:string.c:  } else
+outt.txt:cuth:			}else{
+outt.txt:bootmain.c:// Part of the boot block, along with bootasm.S, which calls bootmain().
+outt.txt:trapasm.S:  # Return falls through to trapret...
+outt.txt:mp.c:  } else {
+outt.txt:Makefile:# Using native tools (e.g., on X86 Linux)
+outt.txt:Makefile:	else echo "***" 1>&2; \
+outt.txt:Makefile:	echo "*** Error: Couldn't find an i386-*-elf version of GCC/binutils." 1>&2; \
+outt.txt:Makefile:	else \
+outt.txt:Makefile:# details:
+outt.txt:Makefile:	_ls\
+outt.txt:Makefile:	ls -l xv6.pdf
+outt.txt:Makefile:	else echo "-s -p $(GDBPORT)"; fi)
+outt.txt:Makefile:	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+outt.txt:umalloc.c:  } else
+outt.txt:umalloc.c:  } else
+outt.txt:umalloc.c:      else {
+outt.txt:forktest.c:// Test that fork fails gracefully.
+outt.txt:file.c:  else if(ff.type == FD_INODE){
+outt.txt:bio.c:// in memory reduces the number of disk reads and also provides
+outt.txt:bio.c:// * When done with the buffer, call brelse.
+outt.txt:bio.c:// * Do not use the buffer after calling brelse.
+outt.txt:bio.c:brelse(struct buf *b)
+outt.txt:bio.c:    panic("brelse");
+outt.txt:defs.h:void            brelse(struct buf*);
+outt.txt:memide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+outt.txt:memide.c:  } else
+outt.txt:log.c:// Simple logging that allows concurrent FS system calls.
+outt.txt:log.c:// calls. The logging system only commits when there are
+outt.txt:log.c:// no FS system calls active. Thus there is never
+outt.txt:log.c:// the count of in-progress FS system calls and returns.
+outt.txt:log.c:  int outstanding; // how many FS sys calls are executing.
+outt.txt:log.c:    brelse(lbuf);
+outt.txt:log.c:    brelse(dbuf);
+outt.txt:log.c:  brelse(buf);
+outt.txt:log.c:  brelse(buf);
+outt.txt:log.c:    } else if(log.lh.n + (log.outstanding+1)*MAXOPBLOCKS > LOGSIZE){
+outt.txt:log.c:    } else {
+outt.txt:log.c:  } else {
+outt.txt:log.c:    brelse(from);
+outt.txt:log.c:    brelse(to);
+outt.txt:log.c://   brelse(bp)
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:    else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:    else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:      else
+outt.txt:gdbutil:    else
+outt.txt:gdbutil:      else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:  else
+outt.txt:gdbutil:    else
+outt.txt:kbd.c:  } else if(data & 0x80){
+outt.txt:kbd.c:  } else if(shift & E0ESC){
+outt.txt:kbd.c:    else if('A' <= c && c <= 'Z')
+outt.txt:kalloc.c:// 1. main() calls kinit1() while still using entrypgdir to place just
+outt.txt:kalloc.c:// 2. main() calls kinit2() with the rest of the physical pages
+outt.txt:README:2000)). See also https://pdos.csail.mit.edu/6.828/, which
+outt.txt:README:We are also grateful for the bug reports and patches contributed by Silas
+outt.txt:README:Nelson Elhage, Saar Ettinger, Alice Ferrazzi, Nathaniel Filardo, Peter
+outt.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+) +([^ ]+)/) {
+outt.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+)/) {
+outt.txt:runoff:		elsif(/^([0-9]+) (enum|struct|union) +([A-Za-z0-9_]+) +{/){ 
+outt.txt:runoff:#	else
+outt.txt:runoff:else
+outt.txt:out.txt:pr.pl:}else{
+outt.txt:out.txt:pipe.c:  } else {
+outt.txt:out.txt:pipe.c:  } else
+outt.txt:out.txt:Notes:sector-aligned. so you can't use ld -N. and the sections may also need
+outt.txt:out.txt:Notes:to be non-zero length, only really matters for tiny "kernels".
+outt.txt:out.txt:Notes:    also protects next_pid
+outt.txt:out.txt:Notes:    also maybe freeness?
+outt.txt:out.txt:Notes:sh: chain of pipes won't work, also ugly that parent closes fdarray entries too
+outt.txt:out.txt:entry.S:# the kernel C code, so it can refer to kernel symbols such as main().
+outt.txt:out.txt:ide.c:  } else {
+outt.txt:out.txt:ide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+outt.txt:out.txt:runoff.list:# system calls
+outt.txt:out.txt:fs.c:  brelse(bp);
+outt.txt:out.txt:fs.c:  brelse(bp);
+outt.txt:out.txt:fs.c:        brelse(bp);
+outt.txt:out.txt:fs.c:    brelse(bp);
+outt.txt:out.txt:fs.c:  brelse(bp);
+outt.txt:out.txt:fs.c:// ilock() is separate from iget() so that system calls can
+outt.txt:out.txt:fs.c:// The separation also helps avoid deadlock and races during
+outt.txt:out.txt:fs.c:      brelse(bp);
+outt.txt:out.txt:fs.c:    brelse(bp);
+outt.txt:out.txt:fs.c:  brelse(bp);
+outt.txt:out.txt:fs.c:    brelse(bp);
+outt.txt:out.txt:fs.c:// All calls to iput() must be inside a transaction in
+outt.txt:out.txt:fs.c:    brelse(bp);
+outt.txt:out.txt:fs.c:    brelse(bp);
+outt.txt:out.txt:fs.c:    brelse(bp);
+outt.txt:out.txt:fs.c:    brelse(bp);
+outt.txt:out.txt:fs.c:  else {
+outt.txt:out.txt:fs.c:// Must be called inside a transaction since it calls iput().
+outt.txt:out.txt:fs.c:  else
+outt.txt:out.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+outt.txt:out.txt:mkfs.c:    perror("lseek");
+outt.txt:out.txt:mkfs.c:  if(lseek(fsfd, sec * BSIZE, 0) != sec * BSIZE){
+outt.txt:out.txt:mkfs.c:    perror("lseek");
+outt.txt:out.txt:mkfs.c:    } else {
+outt.txt:out.txt:vm.c:  } else {
+outt.txt:out.txt:vm.c:// current process's page table during system calls and interrupts;
+outt.txt:out.txt:vm.c:    else
+outt.txt:out.txt:vm.c:    else if((*pte & PTE_P) != 0){
+outt.txt:out.txt:syscall.c:static int (*syscalls[])(void) = {
+outt.txt:out.txt:syscall.c:  if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
+outt.txt:out.txt:syscall.c:    curproc->tf->eax = syscalls[num]();
+outt.txt:out.txt:syscall.c:  } else {
+outt.txt:out.txt:console.c:  else
+outt.txt:out.txt:console.c:  else if(c == BACKSPACE){
+outt.txt:out.txt:console.c:  } else
+outt.txt:out.txt:console.c:  } else
+outt.txt:out.txt:wc.c:      else if(!inword){
+outt.txt:out.txt:user.h:// system calls
+outt.txt:out.txt:string.c:  } else
+outt.txt:out.txt:string.c:  } else
+outt.txt:out.txt:cuth:			}else{
+outt.txt:out.txt:bootmain.c:// Part of the boot block, along with bootasm.S, which calls bootmain().
+outt.txt:out.txt:trapasm.S:  # Return falls through to trapret...
+outt.txt:out.txt:mp.c:  } else {
+outt.txt:out.txt:Makefile:# Using native tools (e.g., on X86 Linux)
+outt.txt:out.txt:Makefile:	else echo "***" 1>&2; \
+outt.txt:out.txt:Makefile:	echo "*** Error: Couldn't find an i386-*-elf version of GCC/binutils." 1>&2; \
+outt.txt:out.txt:Makefile:	else \
+outt.txt:out.txt:Makefile:# details:
+outt.txt:out.txt:Makefile:	_ls\
+outt.txt:out.txt:Makefile:	ls -l xv6.pdf
+outt.txt:out.txt:Makefile:	else echo "-s -p $(GDBPORT)"; fi)
+outt.txt:out.txt:Makefile:	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+outt.txt:out.txt:umalloc.c:  } else
+outt.txt:out.txt:umalloc.c:  } else
+outt.txt:out.txt:umalloc.c:      else {
+outt.txt:out.txt:forktest.c:// Test that fork fails gracefully.
+outt.txt:out.txt:file.c:  else if(ff.type == FD_INODE){
+outt.txt:out.txt:bio.c:// in memory reduces the number of disk reads and also provides
+outt.txt:out.txt:bio.c:// * When done with the buffer, call brelse.
+outt.txt:out.txt:bio.c:// * Do not use the buffer after calling brelse.
+outt.txt:out.txt:bio.c:brelse(struct buf *b)
+outt.txt:out.txt:bio.c:    panic("brelse");
+outt.txt:out.txt:defs.h:void            brelse(struct buf*);
+outt.txt:out.txt:memide.c:// Else if B_VALID is not set, read buf from disk, set B_VALID.
+outt.txt:out.txt:memide.c:  } else
+outt.txt:out.txt:log.c:// Simple logging that allows concurrent FS system calls.
+outt.txt:out.txt:log.c:// calls. The logging system only commits when there are
+outt.txt:out.txt:log.c:// no FS system calls active. Thus there is never
+outt.txt:out.txt:log.c:// the count of in-progress FS system calls and returns.
+outt.txt:out.txt:log.c:  int outstanding; // how many FS sys calls are executing.
+outt.txt:out.txt:log.c:    brelse(lbuf);
+outt.txt:out.txt:log.c:    brelse(dbuf);
+outt.txt:out.txt:log.c:  brelse(buf);
+outt.txt:out.txt:log.c:  brelse(buf);
+outt.txt:out.txt:log.c:    } else if(log.lh.n + (log.outstanding+1)*MAXOPBLOCKS > LOGSIZE){
+outt.txt:out.txt:log.c:    } else {
+outt.txt:out.txt:log.c:  } else {
+outt.txt:out.txt:log.c:    brelse(from);
+outt.txt:out.txt:log.c:    brelse(to);
+outt.txt:out.txt:log.c://   brelse(bp)
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:    else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:    else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:      else
+outt.txt:out.txt:gdbutil:    else
+outt.txt:out.txt:gdbutil:      else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:  else
+outt.txt:out.txt:gdbutil:    else
+outt.txt:out.txt:kbd.c:  } else if(data & 0x80){
+outt.txt:out.txt:kbd.c:  } else if(shift & E0ESC){
+outt.txt:out.txt:kbd.c:    else if('A' <= c && c <= 'Z')
+outt.txt:out.txt:kalloc.c:// 1. main() calls kinit1() while still using entrypgdir to place just
+outt.txt:out.txt:kalloc.c:// 2. main() calls kinit2() with the rest of the physical pages
+outt.txt:out.txt:README:2000)). See also https://pdos.csail.mit.edu/6.828/, which
+outt.txt:out.txt:README:We are also grateful for the bug reports and patches contributed by Silas
+outt.txt:out.txt:README:Nelson Elhage, Saar Ettinger, Alice Ferrazzi, Nathaniel Filardo, Peter
+outt.txt:out.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+) +([^ ]+)/) {
+outt.txt:out.txt:runoff:		elsif (/^([0-9]+) #define +([A-Za-z0-9_]+)/) {
+outt.txt:out.txt:runoff:		elsif(/^([0-9]+) (enum|struct|union) +([A-Za-z0-9_]+) +{/){ 
+outt.txt:out.txt:runoff:#	else
+outt.txt:out.txt:runoff:else
+outt.txt:out.txt:.gdbinit.tmpl:  else
+outt.txt:out.txt:usertests.c:  } else {
+outt.txt:out.txt:usertests.c:  } else {
+outt.txt:out.txt:usertests.c:  } else {
+outt.txt:out.txt:usertests.c:    } else if(i != 512){
+outt.txt:out.txt:usertests.c:  } else if(pid > 0){
+outt.txt:out.txt:usertests.c:  } else {
+outt.txt:out.txt:usertests.c:    } else {
+outt.txt:out.txt:usertests.c:  } else {
+outt.txt:out.txt:usertests.c:  else
+outt.txt:out.txt:usertests.c:  } else {
+outt.txt:out.txt:usertests.c:      } else if((i >= 1 && i < N/2) && fd >= 0){
+outt.txt:out.txt:usertests.c:    } else if(pid == 0 && (i % 5) == 1){
+outt.txt:out.txt:usertests.c:    } else {
+outt.txt:out.txt:usertests.c:    else
+outt.txt:out.txt:usertests.c:    } else {
+outt.txt:out.txt:usertests.c:    else
+outt.txt:out.txt:usertests.c:    } else if((x % 3) == 1){
+outt.txt:out.txt:usertests.c:    } else {
+outt.txt:out.txt:usertests.c:  else
+outt.txt:out.txt:usertests.c:// test that fork fails gracefully
+outt.txt:out.txt:usertests.c:// the forktest binary also does this, but it runs out of proc entries first.
+outt.txt:out.txt:usertests.c:  } else if(pid < 0){
+outt.txt:out.txt:usertests.c:  } else if(pid < 0){
+outt.txt:out.txt:ioapic.c:// See also picirq.c.
+outt.txt:out.txt:proc.c:  // writes to be visible, and the lock is also needed
+outt.txt:out.txt:proc.c:  } else if(n < 0){
+outt.txt:out.txt:proc.c:// until its parent calls wait() to find out it exited.
+outt.txt:out.txt:proc.c:// Each CPU calls scheduler() after setting itself up.
+outt.txt:out.txt:proc.c:    else
+outt.txt:out.txt:printpcs:# Decode the symbols from a panic EIP list
+outt.txt:out.txt:runoff1:	}else{
+outt.txt:out.txt:runoff1:				}else{
+outt.txt:out.txt:sleep1.p:	:: else ->
+outt.txt:out.txt:sleep1.p:	:: else ->
+outt.txt:out.txt:sleep1.p:	:: else ->
+outt.txt:out.txt:sleep1.p:	:: else ->
+outt.txt:out.txt:stressfs.c:// For this to work, you should also add a spin within iderw's
+outt.txt:out.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+outt.txt:out.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+outt.txt:out.txt:dot-bochsrc:#display_library: sdl, options="fullscreen" # startup in fullscreen mode
+outt.txt:out.txt:dot-bochsrc:# The ROM BIOS controls what the PC does when it first powers on.
+outt.txt:out.txt:dot-bochsrc:# You can also use the environment variable $BXSHARE to specify the
+outt.txt:out.txt:dot-bochsrc:# It can also be a convenient way to upload some arbitrary code/data
+outt.txt:out.txt:dot-bochsrc:# These options enables up to 4 ata channels. For each channel
+outt.txt:out.txt:dot-bochsrc:# legacy 'a' and 'c' are also supported
+outt.txt:out.txt:dot-bochsrc:# Bochs now has four severity levels for event logging.
+outt.txt:out.txt:dot-bochsrc:# You can also toggle the mouse usage at runtime (control key + middle
+outt.txt:out.txt:dot-bochsrc:# fullscreen: ONLY IMPLEMENTED ON AMIGA
+outt.txt:out.txt:dot-bochsrc:#   fullscreen: enabled=0
+outt.txt:out.txt:dot-bochsrc:#   fullscreen: enabled=1
+outt.txt:out.txt:dot-bochsrc:#fullscreen: enabled=0
+outt.txt:out.txt:dot-bochsrc:# Also, the first byte must be an even number (bit 0 set means a multicast
+outt.txt:out.txt:dot-bochsrc:# This option controls the presence of the i440FX PCI chipset. You can
+outt.txt:out.txt:dot-bochsrc:# also specify the devices connected to PCI slots. Up to 5 slots are
+outt.txt:out.txt:dot-bochsrc:# This option controls the presence of the USB root hub which is a part
+outt.txt:out.txt:dot-bochsrc:# The rtc_init parameter controls whether initialize the RTC with values stored
+outt.txt:out.txt:dot-bochsrc:# Enable GDB stub. See user documentation for details.
+outt.txt:out.txt:sh.c:char symbols[] = "<|>&;()";
+outt.txt:out.txt:sh.c:    while(s < es && !strchr(whitespace, *s) && !strchr(symbols, *s))
+outt.txt:out.txt:spinlock.c:  // stores; __sync_synchronize() tells them both not to.
+outt.txt:out.txt:spinlock.c:// it takes two popcli to undo two pushcli.  Also, if interrupts
+outt.txt:out.txt:ls.c:ls(char *path)
+outt.txt:out.txt:ls.c:    printf(2, "ls: cannot open %s\n", path);
+outt.txt:out.txt:ls.c:    printf(2, "ls: cannot stat %s\n", path);
+outt.txt:out.txt:ls.c:      printf(1, "ls: path too long\n");
+outt.txt:out.txt:ls.c:        printf(1, "ls: cannot stat %s\n", buf);
+outt.txt:out.txt:ls.c:    ls(".");
+outt.txt:out.txt:ls.c:    ls(argv[i]);
+outt.txt:out.txt:sysfile.c:// File-system system calls.
+outt.txt:out.txt:sysfile.c:// user code, and calls into file.c and fs.c.
+outt.txt:out.txt:sysfile.c:  } else {
+outt.txt:out.txt:printf.c:  } else {
+outt.txt:out.txt:printf.c:      } else {
+outt.txt:out.txt:printf.c:    } else if(state == '%'){
+outt.txt:out.txt:printf.c:      } else if(c == 'x' || c == 'p'){
+outt.txt:out.txt:printf.c:      } else if(c == 's'){
+outt.txt:out.txt:printf.c:      } else if(c == 'c'){
+outt.txt:out.txt:printf.c:      } else if(c == '%'){
+outt.txt:out.txt:printf.c:      } else {
+outt.txt:out.txt:kernel.ld:	/* Conventionally, Unix linkers provide pseudo-symbols
+outt.txt:out.txt:kernel.ld:	 * symbols, because the convention started before there was a
+outt.txt:.gdbinit.tmpl:  else
+outt.txt:usertests.c:  } else {
+outt.txt:usertests.c:  } else {
+outt.txt:usertests.c:  } else {
+outt.txt:usertests.c:    } else if(i != 512){
+outt.txt:usertests.c:  } else if(pid > 0){
+outt.txt:usertests.c:  } else {
+outt.txt:usertests.c:    } else {
+outt.txt:usertests.c:  } else {
+outt.txt:usertests.c:  else
+outt.txt:usertests.c:  } else {
+outt.txt:usertests.c:      } else if((i >= 1 && i < N/2) && fd >= 0){
+outt.txt:usertests.c:    } else if(pid == 0 && (i % 5) == 1){
+outt.txt:usertests.c:    } else {
+outt.txt:usertests.c:    else
+outt.txt:usertests.c:    } else {
+outt.txt:usertests.c:    else
+outt.txt:usertests.c:    } else if((x % 3) == 1){
+outt.txt:usertests.c:    } else {
+outt.txt:usertests.c:  else
+outt.txt:usertests.c:// test that fork fails gracefully
+outt.txt:usertests.c:// the forktest binary also does this, but it runs out of proc entries first.
+outt.txt:usertests.c:  } else if(pid < 0){
+outt.txt:usertests.c:  } else if(pid < 0){
+outt.txt:ioapic.c:// See also picirq.c.
+outt.txt:proc.c:  // writes to be visible, and the lock is also needed
+outt.txt:proc.c:  } else if(n < 0){
+outt.txt:proc.c:// until its parent calls wait() to find out it exited.
+outt.txt:proc.c:// Each CPU calls scheduler() after setting itself up.
+outt.txt:proc.c:    else
+outt.txt:printpcs:# Decode the symbols from a panic EIP list
+outt.txt:runoff1:	}else{
+outt.txt:runoff1:				}else{
+outt.txt:sleep1.p:	:: else ->
+outt.txt:sleep1.p:	:: else ->
+outt.txt:sleep1.p:	:: else ->
+outt.txt:sleep1.p:	:: else ->
+outt.txt:stressfs.c:// For this to work, you should also add a spin within iderw's
+outt.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+outt.txt:dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+outt.txt:dot-bochsrc:#display_library: sdl, options="fullscreen" # startup in fullscreen mode
+outt.txt:dot-bochsrc:# The ROM BIOS controls what the PC does when it first powers on.
+outt.txt:dot-bochsrc:# You can also use the environment variable $BXSHARE to specify the
+outt.txt:dot-bochsrc:# It can also be a convenient way to upload some arbitrary code/data
+outt.txt:dot-bochsrc:# These options enables up to 4 ata channels. For each channel
+outt.txt:dot-bochsrc:# legacy 'a' and 'c' are also supported
+outt.txt:dot-bochsrc:# Bochs now has four severity levels for event logging.
+outt.txt:dot-bochsrc:# You can also toggle the mouse usage at runtime (control key + middle
+outt.txt:dot-bochsrc:# fullscreen: ONLY IMPLEMENTED ON AMIGA
+outt.txt:dot-bochsrc:#   fullscreen: enabled=0
+outt.txt:dot-bochsrc:#   fullscreen: enabled=1
+outt.txt:dot-bochsrc:#fullscreen: enabled=0
+outt.txt:dot-bochsrc:# Also, the first byte must be an even number (bit 0 set means a multicast
+outt.txt:dot-bochsrc:# This option controls the presence of the i440FX PCI chipset. You can
+outt.txt:dot-bochsrc:# also specify the devices connected to PCI slots. Up to 5 slots are
+outt.txt:dot-bochsrc:# This option controls the presence of the USB root hub which is a part
+outt.txt:dot-bochsrc:# The rtc_init parameter controls whether initialize the RTC with values stored
+outt.txt:dot-bochsrc:# Enable GDB stub. See user documentation for details.
+outt.txt:sh.c:char symbols[] = "<|>&;()";
+outt.txt:sh.c:    while(s < es && !strchr(whitespace, *s) && !strchr(symbols, *s))
+outt.txt:spinlock.c:  // stores; __sync_synchronize() tells them both not to.
+outt.txt:spinlock.c:// it takes two popcli to undo two pushcli.  Also, if interrupts
+outt.txt:ls.c:ls(char *path)
+outt.txt:ls.c:    printf(2, "ls: cannot open %s\n", path);
+outt.txt:ls.c:    printf(2, "ls: cannot stat %s\n", path);
+outt.txt:ls.c:      printf(1, "ls: path too long\n");
+outt.txt:ls.c:        printf(1, "ls: cannot stat %s\n", buf);
+outt.txt:ls.c:    ls(".");
+outt.txt:ls.c:    ls(argv[i]);
+outt.txt:sysfile.c:// File-system system calls.
+outt.txt:sysfile.c:// user code, and calls into file.c and fs.c.
+outt.txt:sysfile.c:  } else {
+outt.txt:printf.c:  } else {
+outt.txt:printf.c:      } else {
+outt.txt:printf.c:    } else if(state == '%'){
+outt.txt:printf.c:      } else if(c == 'x' || c == 'p'){
+outt.txt:printf.c:      } else if(c == 's'){
+outt.txt:printf.c:      } else if(c == 'c'){
+outt.txt:printf.c:      } else if(c == '%'){
+outt.txt:printf.c:      } else {
+outt.txt:kernel.ld:	/* Conventionally, Unix linkers provide pseudo-symbols
+outt.txt:kernel.ld:	 * symbols, because the convention started before there was a
+.gdbinit.tmpl:  else
+usertests.c:  } else {
+usertests.c:  } else {
+usertests.c:  } else {
+usertests.c:    } else if(i != 512){
+usertests.c:  } else if(pid > 0){
+usertests.c:  } else {
+usertests.c:    } else {
+usertests.c:  } else {
+usertests.c:  else
+usertests.c:  } else {
+usertests.c:      } else if((i >= 1 && i < N/2) && fd >= 0){
+usertests.c:    } else if(pid == 0 && (i % 5) == 1){
+usertests.c:    } else {
+usertests.c:    else
+usertests.c:    } else {
+usertests.c:    else
+usertests.c:    } else if((x % 3) == 1){
+usertests.c:    } else {
+usertests.c:  else
+usertests.c:// test that fork fails gracefully
+usertests.c:// the forktest binary also does this, but it runs out of proc entries first.
+usertests.c:  } else if(pid < 0){
+usertests.c:  } else if(pid < 0){
+ioapic.c:// See also picirq.c.
+proc.c:  // writes to be visible, and the lock is also needed
+proc.c:  } else if(n < 0){
+proc.c:// until its parent calls wait() to find out it exited.
+proc.c:// Each CPU calls scheduler() after setting itself up.
+proc.c:    else
+printpcs:# Decode the symbols from a panic EIP list
+runoff1:	}else{
+runoff1:				}else{
+sleep1.p:	:: else ->
+sleep1.p:	:: else ->
+sleep1.p:	:: else ->
+sleep1.p:	:: else ->
+stressfs.c:// For this to work, you should also add a spin within iderw's
+dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+dot-bochsrc:# NOTE: if you use the "wx" configuration interface, you must also use
+dot-bochsrc:#display_library: sdl, options="fullscreen" # startup in fullscreen mode
+dot-bochsrc:# The ROM BIOS controls what the PC does when it first powers on.
+dot-bochsrc:# You can also use the environment variable $BXSHARE to specify the
+dot-bochsrc:# It can also be a convenient way to upload some arbitrary code/data
+dot-bochsrc:# These options enables up to 4 ata channels. For each channel
+dot-bochsrc:# legacy 'a' and 'c' are also supported
+dot-bochsrc:# Bochs now has four severity levels for event logging.
+dot-bochsrc:# You can also toggle the mouse usage at runtime (control key + middle
+dot-bochsrc:# fullscreen: ONLY IMPLEMENTED ON AMIGA
+dot-bochsrc:#   fullscreen: enabled=0
+dot-bochsrc:#   fullscreen: enabled=1
+dot-bochsrc:#fullscreen: enabled=0
+dot-bochsrc:# Also, the first byte must be an even number (bit 0 set means a multicast
+dot-bochsrc:# This option controls the presence of the i440FX PCI chipset. You can
+dot-bochsrc:# also specify the devices connected to PCI slots. Up to 5 slots are
+dot-bochsrc:# This option controls the presence of the USB root hub which is a part
+dot-bochsrc:# The rtc_init parameter controls whether initialize the RTC with values stored
+dot-bochsrc:# Enable GDB stub. See user documentation for details.
+sh.c:char symbols[] = "<|>&;()";
+sh.c:    while(s < es && !strchr(whitespace, *s) && !strchr(symbols, *s))
+spinlock.c:  // stores; __sync_synchronize() tells them both not to.
+spinlock.c:// it takes two popcli to undo two pushcli.  Also, if interrupts
+ls.c:ls(char *path)
+ls.c:    printf(2, "ls: cannot open %s\n", path);
+ls.c:    printf(2, "ls: cannot stat %s\n", path);
+ls.c:      printf(1, "ls: path too long\n");
+ls.c:        printf(1, "ls: cannot stat %s\n", buf);
+ls.c:    ls(".");
+ls.c:    ls(argv[i]);
+sysfile.c:// File-system system calls.
+sysfile.c:// user code, and calls into file.c and fs.c.
+sysfile.c:  } else {
+printf.c:  } else {
+printf.c:      } else {
+printf.c:    } else if(state == '%'){
+printf.c:      } else if(c == 'x' || c == 'p'){
+printf.c:      } else if(c == 's'){
+printf.c:      } else if(c == 'c'){
+printf.c:      } else if(c == '%'){
+printf.c:      } else {
+kernel.ld:	/* Conventionally, Unix linkers provide pseudo-symbols
+kernel.ld:	 * symbols, because the convention started before there was a

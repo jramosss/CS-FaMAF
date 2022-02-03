@@ -1,0 +1,100 @@
+Configuring equ-0.2.1...
+Preprocessing library equ-0.2.1...
+[ 1 of 43] Compiling Equ.Types        ( Equ/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Types.o )
+
+Equ/Types.hs:15:1: warning: [-Wunused-imports]
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+
+Equ/Types.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Data.Traversable’ is redundant
+      except perhaps to import instances from ‘Data.Traversable’
+    To import instances alone, use: import Data.Traversable()
+
+Equ/Types.hs:89:1: warning: [-Worphans]
+    Orphan instance: instance Serialize TyVarName
+    To avoid this
+        move the instance declaration to the module of the class or of the type, or
+        wrap the type with a newtype and declare the instance on the new type.
+
+Equ/Types.hs:170:1: warning: [-Worphans]
+    Orphan instance: instance Arbitrary TyVarName
+    To avoid this
+        move the instance declaration to the module of the class or of the type, or
+        wrap the type with a newtype and declare the instance on the new type.
+[ 2 of 43] Compiling Equ.Theories.AbsName ( Equ/Theories/AbsName.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Theories/AbsName.o )
+[ 3 of 43] Compiling Equ.Syntax       ( Equ/Syntax.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Syntax.o )
+[ 4 of 43] Compiling Equ.TypeChecker.Error ( Equ/TypeChecker/Error.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/TypeChecker/Error.o )
+[ 5 of 43] Compiling Equ.TypeChecker.Unification ( Equ/TypeChecker/Unification.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/TypeChecker/Unification.o )
+[ 6 of 43] Compiling Equ.PreExpr.Symbols ( Equ/PreExpr/Symbols.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr/Symbols.o )
+[ 7 of 43] Compiling Equ.PreExpr.Internal ( Equ/PreExpr/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr/Internal.o )
+[ 8 of 43] Compiling Equ.PreExpr.Subst ( Equ/PreExpr/Subst.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr/Subst.o )
+[ 9 of 43] Compiling Equ.PreExpr.Zipper ( Equ/PreExpr/Zipper.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr/Zipper.o )
+[10 of 43] Compiling Equ.PreExpr.Monad ( Equ/PreExpr/Monad.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr/Monad.o )
+[11 of 43] Compiling Equ.PreExpr.Eval ( Equ/PreExpr/Eval.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr/Eval.o )
+
+Equ/PreExpr/Eval.hs:8:1: warning: [-Wunused-imports]
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[12 of 43] Compiling Equ.PreExpr.Show ( Equ/PreExpr/Show.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr/Show.o )
+[13 of 43] Compiling Equ.PreExpr      ( Equ/PreExpr.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/PreExpr.o )
+[14 of 43] Compiling Equ.TypeChecker.State ( Equ/TypeChecker/State.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/TypeChecker/State.o )
+[15 of 43] Compiling Equ.TypeChecker  ( Equ/TypeChecker.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/TypeChecker.o )
+[16 of 43] Compiling Equ.Parser.Types ( Equ/Parser/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Parser/Types.o )
+[17 of 43] Compiling Equ.Matching.Error ( Equ/Matching/Error.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Matching/Error.o )
+[18 of 43] Compiling Equ.Matching     ( Equ/Matching.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Matching.o )
+[19 of 43] Compiling Equ.IndType      ( Equ/IndType.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/IndType.o )
+[20 of 43] Compiling Equ.Expr         ( Equ/Expr.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Expr.o )
+[21 of 43] Compiling Equ.Rule         ( Equ/Rule.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Rule.o )
+[22 of 43] Compiling Equ.Rewrite      ( Equ/Rewrite.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Rewrite.o )
+[23 of 43] Compiling Equ.Theories.Common ( Equ/Theories/Common.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Theories/Common.o )
+[24 of 43] Compiling Equ.Proof.Condition ( Equ/Proof/Condition.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/Condition.o )
+[25 of 43] Compiling Equ.Proof.Proof  ( Equ/Proof/Proof.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/Proof.o )
+
+Equ/Proof/Proof.hs:61:1: warning: [-Wunused-imports]
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+[26 of 43] Compiling Equ.Proof.Zipper ( Equ/Proof/Zipper.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/Zipper.o )
+
+Equ/Proof/Zipper.hs:18:1: warning: [-Wunused-imports]
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+[27 of 43] Compiling Equ.Proof.Error  ( Equ/Proof/Error.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/Error.o )
+[28 of 43] Compiling Equ.Proof.ListedProof ( Equ/Proof/ListedProof.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/ListedProof.o )
+[29 of 43] Compiling Equ.Proof.Annot  ( Equ/Proof/Annot.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/Annot.o )
+
+Equ/Proof/Annot.hs:22:1: warning: [-Worphans]
+    Orphan instance: instance Show ProofAnnotation
+    To avoid this
+        move the instance declaration to the module of the class or of the type, or
+        wrap the type with a newtype and declare the instance on the new type.
+
+Equ/Proof/Annot.hs:42:1: warning: [-Worphans]
+    Orphan instance: instance Show ListedAnnots
+    To avoid this
+        move the instance declaration to the module of the class or of the type, or
+        wrap the type with a newtype and declare the instance on the new type.
+[30 of 43] Compiling Equ.Proof.Monad  ( Equ/Proof/Monad.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/Monad.o )
+[31 of 43] Compiling Equ.TypeChecker.Proof ( Equ/TypeChecker/Proof.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/TypeChecker/Proof.o )
+[32 of 43] Compiling Equ.Theories.Arith ( Equ/Theories/Arith.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Theories/Arith.o )
+[33 of 43] Compiling Equ.Theories.FOL ( Equ/Theories/FOL.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Theories/FOL.o )
+[34 of 43] Compiling Equ.Theories.List ( Equ/Theories/List.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Theories/List.o )
+[35 of 43] Compiling Equ.IndTypes     ( Equ/IndTypes.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/IndTypes.o )
+[36 of 43] Compiling Equ.Theories     ( Equ/Theories.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Theories.o )
+[37 of 43] Compiling Equ.Parser.Expr  ( Equ/Parser/Expr.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Parser/Expr.o )
+[38 of 43] Compiling Equ.Proof.Induction ( Equ/Proof/Induction.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof/Induction.o )
+[39 of 43] Compiling Equ.Proof        ( Equ/Proof.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Proof.o )
+[40 of 43] Compiling Equ.Parser.Proof ( Equ/Parser/Proof.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Parser/Proof.o )
+
+Equ/Parser/Proof.hs:385:17: warning: [-Wunused-local-binds]
+    Defined but not used: ‘ctx'’
+[41 of 43] Compiling Equ.Parser       ( Equ/Parser.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Parser.o )
+[42 of 43] Compiling Equ.Exercise.Conf ( Equ/Exercise/Conf.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Exercise/Conf.o )
+[43 of 43] Compiling Equ.Exercise     ( Equ/Exercise.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Equ/Exercise.o )
+Installing library in
+/home/shuls/Desktop/Shuls/algo1/HAL/hal-gui/hal-gui-master/.stack-work/install/x86_64-linux/lts-9.6/8.0.2/lib/x86_64-linux-ghc-8.0.2/equ-0.2.1-IrbkmeDYIk3D2O8lOMIqnj
+Registering equ-0.2.1...

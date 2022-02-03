@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Symbolab Desbloquea Pasos ",
+  "description": "Desbloquea los pasos Symbolab",
+  "version": "2.2",
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["https://*.symbolab.com/*"],
+      "js": ["main.js"]
+      
+    }
+
+  ],
+  "page_action": {
+    "icon": "img.png",
+    "default_icon": "img.png",
+    "default_title": "Symbolab"
+  }
+  
+}

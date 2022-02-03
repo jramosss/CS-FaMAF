@@ -1,0 +1,34 @@
+file 35024 1621189278                                           
+version 2
+run General-0-20210516-15:21:11-6074
+attr configname General
+attr datetime 20210516-15:21:11
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network
+attr processid 6074
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param Network.nodeTx.gen.generationInterval exponential(0.3)
+param Network.nodeTx.gen.packetByteSize 12500
+param Network.queue.bufferSize 200
+param Network.nodeRx.queue.bufferSize 200
+param Network.nodeTx.queue.bufferSize 2000000
+
+vector 0 Network.nodeTx.gen packetGen ETV
+vector 1 Network.queue_0 bufferSize ETV
+vector 2 Network.nodeRx.traRx rxBufferSize ETV
+vector 3 Network.queue_1 bufferSize ETV
+vector 4 Network.nodeTx.traTx txBufferSize ETV
+0	798 16244 1 1421 0.23876235137 199.88117027292 659 1 1 659 659
+1	17042 287 3 125 0.33886235137 4.320973770647 13 1 1 13 13
+2	17329 313 6 128 0.43896235137 4.421073770647 13 200 200 2600 520000
+3	17642 287 7 129 0.43896235137 4.421073770647 13 1 1 13 13
+4	17929 17094 136 1422 4.983849998792 199.88117027292 644 2 645 208334 89653494
+

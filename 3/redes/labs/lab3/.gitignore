@@ -1,0 +1,8 @@
+.
+.cproject
+.oppbuildspec
+.settings/language.settings.xml
+out/gcc-release/.last-copts
+*.d
+*.o
+	

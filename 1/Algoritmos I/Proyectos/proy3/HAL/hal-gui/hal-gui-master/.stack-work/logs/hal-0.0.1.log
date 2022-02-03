@@ -1,0 +1,15 @@
+Configuring hal-0.0.1...
+Preprocessing library hal-0.0.1...
+[ 1 of 10] Compiling Hal.Symbols      ( Hal/Symbols.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Symbols.o )
+[ 2 of 10] Compiling Hal.Lang         ( Hal/Lang.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Lang.o )
+[ 3 of 10] Compiling Hal.Parser       ( Hal/Parser.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Parser.o )
+[ 4 of 10] Compiling Hal.Verification.THoare ( Hal/Verification/THoare.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Verification/THoare.o )
+[ 5 of 10] Compiling Hal.Verification.VerCond ( Hal/Verification/VerCond.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Verification/VerCond.o )
+[ 6 of 10] Compiling Hal.Verification.WeakPre ( Hal/Verification/WeakPre.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Verification/WeakPre.o )
+[ 7 of 10] Compiling Hal.Evaluation.EvalLang ( Hal/Evaluation/EvalLang.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Evaluation/EvalLang.o )
+[ 8 of 10] Compiling Hal.Interpreter.Interpreter ( Hal/Interpreter/Interpreter.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Interpreter/Interpreter.o )
+[ 9 of 10] Compiling Hal.Interpreter.Parser ( Hal/Interpreter/Parser.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Interpreter/Parser.o )
+[10 of 10] Compiling Hal.Interpreter.Console ( Hal/Interpreter/Console.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Hal/Interpreter/Console.o )
+Installing library in
+/home/shuls/Desktop/Shuls/algo1/HAL/hal-gui/hal-gui-master/.stack-work/install/x86_64-linux/lts-9.6/8.0.2/lib/x86_64-linux-ghc-8.0.2/hal-0.0.1-4tP6Mxw9QsPCrbyKVlPdDZ
+Registering hal-0.0.1...

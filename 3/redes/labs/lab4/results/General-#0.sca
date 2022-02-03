@@ -1,0 +1,40 @@
+version 2
+run General-0-20210528-12:24:05-19691
+attr configname General
+attr datetime 20210528-12:24:05
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network
+attr processid 19691
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param Network.node[0].app.interArrivalTime exponential(1)
+param Network.node[0].app.packetByteSize 125000
+param Network.node[0].app.destination 5
+param Network.node[2].app.interArrivalTime exponential(1)
+param Network.node[2].app.packetByteSize 125000
+param Network.node[2].app.destination 5
+
+scalar Network.node[0].app "Average delay" -nan
+scalar Network.node[0].app "Number of packets" 0
+scalar Network.node[1].app "Average delay" -nan
+scalar Network.node[1].app "Number of packets" 0
+scalar Network.node[2].app "Average delay" -nan
+scalar Network.node[2].app "Number of packets" 0
+scalar Network.node[3].app "Average delay" -nan
+scalar Network.node[3].app "Number of packets" 0
+scalar Network.node[4].app "Average delay" -nan
+scalar Network.node[4].app "Number of packets" 0
+scalar Network.node[5].app "Average delay" 3.0258922895097
+scalar Network.node[5].app "Number of packets" 3
+scalar Network.node[6].app "Average delay" -nan
+scalar Network.node[6].app "Number of packets" 0
+scalar Network.node[7].app "Average delay" -nan
+scalar Network.node[7].app "Number of packets" 0
+

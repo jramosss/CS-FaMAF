@@ -1,0 +1,49 @@
+Name:                fun
+Version:             0.2
+Synopsis:            Derivador de programas a partir de especificaciones.
+Description:         Fun es una herramienta de ayuda para el aprendizaje de
+                     la programación funcional.
+License:             GPL-3
+License-file:        LICENSE
+Author:              Renato Cherini, Alejandro Gadea, Emmanuel Gunther, Miguel Pagano
+Maintainer:          Miguel Pagano <pagano@famaf.unc.edu.ar>
+Build-Type:          Simple
+Cabal-Version:       >=1.2
+Tested-with:         GHC==6.10.1
+Build-type:          Simple
+Bug-reports:         https://github.com/alexgadea/fun/issues
+
+Library
+    Exposed-modules:        Fun.Decl,
+                            Fun.Decl.Error,
+                            Fun.Declarations,
+                            Fun.Verification,
+                            Fun.Verification.Verification,
+                            Fun.Verification.Error,
+                            Fun.Derivation,
+                            Fun.Derivation.Derivation,
+                            Fun.Derivation.Error,
+                            Fun.Eval.Rules,
+                            Fun.Eval.Eval,
+                            Fun.FunTheories.Arith, 
+                            Fun.FunTheories.FOL, 
+                            Fun.FunTheories.List,
+                            Fun.Environment, 
+                            Fun.Module,
+                            Fun.Module.Error,
+                            Fun.Module.Graph,
+                            Fun.Parser, 
+                            Fun.Parser.Decl,
+                            Fun.Parser.Internal,
+                            Fun.Parser.Module,
+                            Fun.Theories, 
+                            Fun.Theory,
+                            Fun.TypeChecker
+
+    Build-depends:          base >= 4.2, text >= 0.11.1.5, 
+                            containers >= 0.4.0.0, equ >= 0.2, 
+                            parsec >= 3.1.1, transformers >= 0.2.2.0,
+                            lens >= 3.9.0.2, fgl, either,
+                            filepath
+
+    GHC-Options:         -Odph -Wall

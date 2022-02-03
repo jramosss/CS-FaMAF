@@ -1,0 +1,12 @@
+varinput x : Int;
+varinput z : Int;
+varinput w : Bool;
+
+x := 9 ;
+w := False ;
+x := x + 1 ;
+w := not w ;
+z := 10 ;
+w := z < x ;
+x := x + z ;
+w := z < x ;

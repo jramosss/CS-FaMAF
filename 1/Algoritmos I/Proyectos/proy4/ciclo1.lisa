@@ -1,0 +1,9 @@
+varinput x : Int;
+varinput y : Int;
+vardef i:Int;
+
+i:=0;
+do not (x<y) ->
+ x:=x-y;
+ i:=i+1;
+od

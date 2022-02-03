@@ -1,0 +1,18 @@
+
+begin proof induction in xs for xs ++ (ys ++ zs) .=. (xs ++ ys) ++ zs where
+basic
+[] -> [] ++ (ys ++ zs)
+      = { Neutro a izquierda de concatenación }
+      ys ++ zs
+      = { Neutro a izquierda de concatenación }
+      ([] ++ ys) ++ zs
+induction x|>xs with hypind -> x|>xs ++ (ys ++ zs)
+                              = { Concatenar lista no vacía }
+                               x |> (xs ++ (ys ++ zs))
+                              = { hypind }
+                               x |> ((xs ++ ys) ++ zs)
+                              = { Concatenar lista no vacía }
+                               x |> (xs ++ ys) ++ zs
+                              = { Concatenar lista no vacía }
+                               (x |> xs ++ ys) ++ zs
+end proof

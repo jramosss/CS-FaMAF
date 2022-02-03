@@ -1,0 +1,9 @@
+varinput x : Int;
+varinput y : Int;
+varinput z : Int;
+varinput b : Bool;
+varinput w : Bool;
+
+evaluar x % 4 = 0;
+evaluar x + y = 0 && y - x = -1 * z;
+evaluar not b && w;

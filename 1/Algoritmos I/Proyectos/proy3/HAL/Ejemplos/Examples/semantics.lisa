@@ -1,0 +1,28 @@
+data Continuation = ToExec Statement
+       | Finish
+
+type StateI = ListaAsoc VarName Int
+type StateB = ListaAsoc VarName Bool
+type State = (StateI, StateB)
+
+evalIExpr :: IntExpr -> StateI -> Int
+evalIExpr = undefined
+
+evalBExpr :: BoolExpr -> State -> Bool
+evalBExpr (ConstB b) s = b
+evalBExpr (VB v) (si, sb) = case la_buscar sb v of
+                Just e -> e
+                Nothing -> defaultBoolValue
+evalBExpr (And b1 b2) s = (evalBExpr b1 s) && (evalBExpr b2 s)
+evalBExpr (Or b1 b2) s = (evalBExpr b1 s) || (evalBExpr b2 s)
+evalBExpr (Not b) s = not (evalBExpr b s)
+evalBExpr (Equal i1 i2) (si, sb) = 
+(evalIExpr i1 si) == (evalIExpr i2 si)
+evalBExpr (Less i1 i2) (si, sb) = 
+(evalIExpr i1 si) < (evalIExpr i2 si)
+
+
+evalStep :: Statement -> State -> (State , Continuation)
+evalStep = undefined
+
+

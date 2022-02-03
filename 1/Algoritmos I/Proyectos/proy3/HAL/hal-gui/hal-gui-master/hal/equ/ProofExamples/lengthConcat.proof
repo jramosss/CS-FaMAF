@@ -1,0 +1,23 @@
+
+begin proof s induction in xs for #(xs ++ ys) .=. (#xs) + (#ys) where
+basic
+[] -> #([] ++ ys)
+      = { Neutro a izquierda de concatenación }
+      #ys
+      = { Neutro a izquierda de la suma }
+      0 + (#ys)
+      = { Longitud de la lista vacía }
+      (#[]) + (#ys)
+induction x|>xs with hypind -> #(x |> xs ++ ys)
+                               = { Concatenar lista no vacía }
+                               #(x |> (xs ++ ys))
+                               = { Longitud de lista no vacía }
+                               succ (# (xs ++ ys))
+                               = { hypind }
+                               succ ( (#xs) + (#ys) )
+                               = { Evaluar suma }
+                               succ (#xs) + (#ys)
+                               = { Longitud de lista no vacía }
+                               (# x|>xs) + (#ys)
+
+end proof  

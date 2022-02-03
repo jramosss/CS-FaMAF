@@ -1,0 +1,12 @@
+
+MEMORY
+{
+    ram : ORIGIN = 0x0000, LENGTH = 0x400000 /* Mi ram es de 4 MB*/
+}
+
+SECTIONS
+{    
+    .text : { *(.text*) } > ram
+    .bss : { *(.bss*) } > ram
+}
+ _stack_end = 0x400000;        /* STACK at RAM end */

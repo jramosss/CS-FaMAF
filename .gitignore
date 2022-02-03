@@ -1,0 +1,11 @@
+*.mp4
+*.avi
+*.m4v
+*.webm
+.vscode
+.idea
+*.o
+__pycache__
+*.pyc
+
+./examenes-viejos/

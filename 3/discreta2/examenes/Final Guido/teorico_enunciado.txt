@@ -1,0 +1,32 @@
+1) (4 puntos) En el teórico vimos que las distancias en caminos sucesivos de Edmonds-Karp no disminuían.
+Llamaremos a un network un "kerro kahdella network" si para todo vértice x distinto de s y t,
+una vez que x se usa en un f-camino aumentante de Edmonds-Karp, la próxima vez que x se pueda usar en un camino aumentante,
+su distancia tanto a s como a t debe haberse al menos DUPLICADO.
+Calcular la complejidad del algoritmo de Edmonds-Karp en un kerro kahdella network, y demostrarla.
+(la complejidad y la demostración son muy parecidas a las de Edmonds-Karp para un network general, pero hay un pequeño pero significativo cambio).
+
+2) (3 puntos) Enunciar el teorema de la cota de Hamming y probarlo PARA CÓDIGOS TERNARIOS.
+(en el teórico vimos códigos binarios, con alfabeto {0,1}. Un código ternario es un códigos con alfabeto {0,1,2}.
+El teorema de la cota de Hamming cambia tanto en el numerador (en forma mas o menos obvia) como en el denominador en el caso
+de códigos terciarios, pero la prueba es casi igual, con los cambios apropiados. Prestar atención especialmente al denominador de la cota).
+
+3) (3 puntos).
+7-SAT es como 3-SAT pero ahora se pide que en cada disjunción haya exactamente 7 literales.
+Reducir polinomialmente 7-SAT a 7-COLOR, siguiendo el modelo de la prueba dada en el teórico de la reducción de 3-SAT a 3-COLOR.
+
+AYUDA: cambios posibles para que la prueba funcione: (una posibilidad, quizás a uds se les ocurre de otra forma, pero de esta forma sale):
+
+a) Primer cambio obvio es que las "garras" formadas por los e's y a's (en la notación del teórico) que consistían en un triángulo formado por los a's
+mas "uñas" dadas por los e's, ahora en vez de ser triángulos deberán ser K7's, con sus extremos correspondientes.
+
+b) Segundo cambio para nada obvio, que se les podría ocurrir pensando un poco pero para ayudarlos se los doy,
+es que los 2 vértices especiales s y t, que estaban unidos entre sí (formando un K2) ahora deberán ser 6 vértices, formando un K6.
+
+Entre esos 6 vértices deberá haber un t que haga el mismo papel que el t de la prueba,
+es decir, debe estar unido a todos los vértices que representan a los literales pero no a los e's.
+
+También deberá haber entre esos 6 vertices un vértice s que haga el mismo papel que el s de la prueba, es decir, estar
+unido a todos los extremos "e" de las "garras" pero no a los vértices que representan a los literales.
+
+Los otros 4 vértices del K6 deben estar unidos tanto a los vértices que representan a los literales como a los extremos "e" de las "garras" para
+poder hacer que la prueba funcione de la misma forma que la dada en el teórico para 3COLOR.

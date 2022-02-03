@@ -1,0 +1,101 @@
+Materializacion: Almacena en disco los resultados parciales
+
+P = Predicado
+i = input del operador
+factor de selectividad = fs(P,i)
+
+Para seleccion:
+Cantidad de registros resultado intermedio = |r| * fs(P,r) # QUIEN ES r?¿?¿?¿¿
+
+Para reunion:
+= |r| * |s| * fs(P,r,s)
+
+Para calcular el factor de selectividad conviene asumir uniformidad e independencia:
+uniformidad: todos los valores de un atrtbuto son igualmente probables
+Independencia: condiciones sobre diferentes atributos son independientes
+
+¿Cómo calcular el número de bloques si tengo en el resultado N
+registros de tamaño R cada uno y B es el tamaño del bloque?
+NumBloques = ⌈(N x R) / B⌉ .
+
+Como procesar y estimar el costo de una consulta con materializacion:
+
+1 - Decidir el plan de ejecucion
+	- Amrar el arbol binario de jecucion
+	- Calcular el factor de sleectividad para selecciones y reuniones 
+	- Decidir operadores fisicos
+
+2 - Estimar el costo de ejecutar el plan de evaluacion
+Calcular el tamaño en bloques de las tablas de la BD
+Calcular el tamaño de los resultados intermedios en bloques
+Calcular el costo de los operadores físicos
+Sumar los costos totales
+
+Operacion de seleccion:
+
+Definimos fs(P,r) para distintos tipos de propiedades P y tabla r
+Desde ahora:
+r = tabla
+A = A' = atributos de r
+c = c' = constante
+
+• Regla 1: Asumiendo uniformidad:
+	• fs(A = c, r) = 1/V(A, r), donde V(A, r) número de distintos valores que aparecen en r para A.
+• Regla 2: Asumiendo uniformidad, A con valor numérico:
+	• fs(A ≥ c, r) = (max(A, r) - c ) / (max(A, r) – min(A, r) )
+• Regla 3: Asumiendo uniformidad, A con valor numérico:
+	• fs(A < c, r) = (c – min(A)) / (max(A) – min(A) + 1)
+• Regla 4: asumiendo uniformidad, A con valor numérico:
+	• fs (c ≤ A < c’, r) = (c’ – c)/ (max(A, r) – min(A, r) )
+• Regla 5: asumiendo independencia:
+	• fs(P1Λ P2 Λ…Λ Pn, r) = fs(P 1 , r) fs(P 2 , r) …. fs(P n , r)
+• Regla 6: usando propiedad de probabilidades:
+	• fs(┐P, r) = 1 – fs(P, r)
+• Regla 7: asumiendo independencia
+	• fs(P ∨ Q, r) = fs(┐ (┐P Λ ┐Q, r)) = 1 – fs(┐P Λ ┐Q, r) = 1 – (fs(┐P, r) * fs(┐Q, r)) = 1 – ((1 – fs(P, r)) * (1 – fs(Q, r)) )
+
+Algoritmo de busqueda lineal:
+Estimacion de costo = br transferencias de bloques + 1 acceso a bloque
+o en su defecto ts + br + tt
+Si se hace busqueda lineal y se selecciona segun igualdad para clave:
+costo = br/2 transferencias de bloques + 1 acceso a bloque
+
+Si se usa un arbol B+ el costo es = 
+
+Con igualdad en clave candidata:
+=(hi + 1) * (tt + ts)
+donde hi denota la altura del indice
+
+Sin:
+= hi * (tt + ts) + ts + tt * b
+
+Selecciones involucrando comparaciones:
+
+Algoritmo para indice primario:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

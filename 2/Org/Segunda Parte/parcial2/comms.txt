@@ -1,0 +1,17 @@
+ qemu-system-aarch64 -s -S -machine virt -cpu cortex-a53 -machine type=virt -nographic -smp 1 -m 64 -kernel kernel.img
+
+//Cada vez que se compile, se deberá reiniciar el emulador, para cerrarlo se debe
+presionar ctrl a + x
+
+Inicio del debugger
+1 - Iniciar debugger GDB (Este comando se debe ejecutar en una terminal diferente a la del emulador)
+$ gdb-multiarch -ex "set architecture aarch64" \-ex "target remote localhost:1234"
+2 - Configurar la arquitectura a utilizar
+>>> set architecture aarch64
+3 - Importar al GDB los símbolos de debug en la dirección de memoria donde se encuentra el
+programa
+>>> add-symbol-file main.o 0x0000000040080000
+
+// dashboard memory watch 0x40080020 112
+// dashboard memory watch 0x40080090 16
+// dashboard memory watch 0x40080038 

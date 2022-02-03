@@ -1,0 +1,74 @@
+El soporte para ejecutar tests de cabal no es de lo mejor (por
+ejemplo, no encontré forma de compilar el suite de pruebas con HPC;
+otro problema es que parece estar mal el parseo de opciones para
+TestSuite). La primer alternativa es conformarse con el soporte de
+cabal para testing (esto corresponde con el commit en github con hash
+93e4ece2a2d1b08fcdb8440b67189affe6e1c59c ).
+
+Testing con cabal
+=================
+
+  * Paquetes instalados:
+    - test-framework
+    - test-framework-quickcheck2
+    - quickcheck 2.4.1.1
+
+ * Pasos simples para correr los test:
+   $ cabal configure --enable-tests
+   $ cabal build
+   $ cabal test
+
+ * Para un pretty-print con cabal: 
+   $ cabal test --show-details=always
+    
+    Nota: Lo que imprime "de mas" esta relacionado con la impresion
+        que hace quickcheck. Si uno compilara el codigo haskell
+        creando un ejecutable entonces quickcheck nos da el
+        prettyprint.
+
+ * Corriendo cabal test, nos genera dos archivos de log, uno con la
+    informacion de los tests que corrio y otro con las salidas IO que
+    hayan dado las distintas corridas de los tests.
+
+
+Testing a mano
+==============
+
+La alternativa un poco más complicada, pero a la vez más flexible es
+definir un ejecutable en equ.cabal y luego ejecutarlo a mano. La idea
+se basa en la respuesta de Edward Kmett en:
+http://stackoverflow.com/questions/3120796/haskell-testing-workflow .
+
+Para generar el ejecutable para correr los logs debemos setear un
+flag en la configuración:
+
+ $ cabal configure -ftests
+ $ cabal build
+
+Eso genera el archivo test-equ y lo podemos ejecutar con:
+
+ $ dist/build/test-equ/test-equ
+
+Si queremos ejecutar un (grupo de) test en particular y no todos, lo
+podemos hacer con:
+ 
+ $ dist/build/test-equ/test-equ --select-test TypeChecker
+ $ dist/build/test-equ/test-equ --select-test TypeChecker/Unifi*
+
+Para poder tener información de cobertura del testing debemos
+usar otro flag:
+  
+ $ cabal configure -ftest -fcoverage
+ $ cabal build
+
+Luego podemos ejecutar el test como antes:
+ $ cd dist/build/test-equ/
+ $ ./test-equ
+
+y ver la cobertura con (asumiendo que PWD=dist/build/test-equ/):
+ 
+ $ hpc report test-equ --exclude=test-equ
+
+Para generar esta información en HTML, cambiamos report por markup
+
+ $ hpc markup test-equ --exclude=test-equ --destdir=coverage
